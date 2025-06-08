@@ -1,0 +1,42 @@
+import { useState } from 'react'
+import "./assets/css/main.css"
+import { Navbar } from "./assets/components/navbar"
+import { MainHeroSection } from "./assets/components/main_hero_section"
+import { CategoriesCard } from "./assets/components/categories_card"
+import { ProductCard } from "./assets/components/product_card"
+function App() {
+
+  return (
+    <>
+      <Navbar />
+      <MainHeroSection />
+      <section className="categories">
+        <div className="container custom-container-xl">
+      <div className="row">
+          <CategoriesCard />
+          <CategoriesCard />
+          <CategoriesCard />
+          <CategoriesCard />
+        </div>
+        </div>
+      
+      </section>
+      <section className="product-cards">
+        <div className="container custom-container-lg">
+          <div className="row">
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
+
+export default App

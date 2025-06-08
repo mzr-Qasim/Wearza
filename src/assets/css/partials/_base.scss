@@ -1,0 +1,113 @@
+
+
+$black-color: #000000;
+$white-color: #ffffff;
+
+
+
+
+body{
+        overflow: hidden;
+    overflow-y: auto;
+    font-family: 'DIN Next W1G';
+
+
+      
+
+}
+
+
+h1, h2, h3, h4, a, ul, li, figure, button{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    border: 0;
+    background-color: transparent;
+}
+
+
+
+.custom-container-lg{
+    max-width: 1400px;
+}
+
+.custom-container-xl{
+    max-width: 1700px;
+}
+
+
+.theme-btn{
+    display: inline-block;
+    padding: .75rem 1.75rem;
+    width: fit-content;
+    transition: all ease-in-out .5s;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: .8rem;
+}
+
+.primary_btn{
+    background-color: $black-color;
+    color: $white-color;
+    border: 1px solid $black-color;
+
+  
+
+    &:hover{
+        background-color: $white-color;
+        color: $black-color;
+    }
+}
+
+.secondary_btn{
+    color: $white-color;
+    background-color: $black-color;
+    border: 1px solid $white-color;
+
+    &:hover{
+        background-color: $white-color;
+        color: $black-color;
+    }
+}
+
+
+
+// color swatches
+
+
+ .color-swatches {
+            ul {
+                display: flex;
+                gap: .5rem;
+                
+            }
+        }
+
+.swatch{
+    display: inline-block;
+    width: 2.2rem;
+    height: 1.1rem;
+            border: 2px solid rgb(197, 197, 197);
+
+
+
+    &.black{
+        background-color: $black-color;
+    }
+    &.brown{
+        background-color: brown;
+    }
+    &.grey{
+        background-color: grey;
+    }
+}
