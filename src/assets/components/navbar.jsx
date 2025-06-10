@@ -1,7 +1,7 @@
 
 import { useState } from "react"
 
-import main_logo from "../../../public/images/main_logo.svg"
+import main_logo from "/images/main_logo.svg"
 
 
 
