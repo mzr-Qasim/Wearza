@@ -12085,7 +12085,7 @@ button {
 }
 
 .custom-container-xl {
-  max-width: 1700px;
+  max-width: 1900px;
 }
 
 .theme-btn {
@@ -12146,7 +12146,7 @@ button {
 
 .main_hero_inner {
   position: relative;
-  min-height: 90vh;
+  min-height: 95vh;
   display: flex;
   padding: 5rem 0;
   align-items: flex-end;
@@ -12168,7 +12168,7 @@ img.main_hero_img {
 .main_hero_caption {
   z-index: 3;
   width: 100%;
-  color: #000000;
+  color: #ffffff;
 }
 .main_hero_caption h2, .main_hero_caption .h2 {
   font-size: clamp(3rem, 4vw, 6rem);
@@ -12205,7 +12205,7 @@ nav.Navbar .main_logo {
 }
 .nav-inner a {
   color: #000000;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .nav-left {

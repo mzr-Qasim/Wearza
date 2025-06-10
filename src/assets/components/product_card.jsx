@@ -33,12 +33,14 @@ export function ProductCard(props) {
                             <button
                                 className="swatch grey"></button>
                         </li>
+
+                        
                     </ul>
 
                 </div>
                 <div className="product-details">
-                        <a href="" className="product-title">{props.product.title}</a>
-                <small className="product-price pt-1">$ {props.product.price}</small>
+                    <a href="" className="product-title">{props.product.title}</a>
+                    <small className="product-price pt-1">${props.product.price}</small>
                 </div>
             </div>
         </div>
