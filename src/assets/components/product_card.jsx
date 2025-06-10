@@ -1,18 +1,17 @@
-import product_card_img from "../images/product-card-2.jpg"
-import card_hover_img from "../images/card-hover-2.jpg"
 
 
 
 
 
-export function ProductCard() {
+
+export function ProductCard(props) {
 
     return (
         <div className="col-sm-6 col-md-4 col-lg-3">
             <div className="product-card">
                 <figure >
-                    <img className="main_img" src={product_card_img} loading="lazy" alt="" />
-                    <img className="hover_img" src={card_hover_img} loading="lazy" alt="" />
+                    <img className="main_img" src={props.product.image} loading="lazy" alt="" />
+                    <img className="hover_img" src={props.product.hover_img} loading="lazy" alt="" />
 
                     <ul className="product-actions">
                         <li><button><i className="icon-favourite"></i></button></li>
@@ -38,8 +37,8 @@ export function ProductCard() {
 
                 </div>
                 <div className="product-details">
-                        <a href="" className="product-title">brown leather jacket</a>
-                <small className="product-price pt-1">$ 800.00</small>
+                        <a href="" className="product-title">{props.product.title}</a>
+                <small className="product-price pt-1">$ {props.product.price}</small>
                 </div>
             </div>
         </div>

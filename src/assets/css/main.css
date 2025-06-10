@@ -12362,17 +12362,17 @@ section.product-cards .product-card figure:hover .product-actions {
 section.product-cards .product-card figure:hover .hover_img {
   opacity: 1;
 }
-section.product-cards .product-card .product-details {
-  font-size: 1.1rem;
-}
 section.product-cards .product-card .product-details .product-title {
   color: #000000;
   text-transform: uppercase;
   font-weight: 500;
+  font-size: 1.1rem;
 }
 section.product-cards .product-card .product-details small, section.product-cards .product-card .product-details .small {
   font-weight: normal;
   display: block;
+  color: #000000;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 1150px) {

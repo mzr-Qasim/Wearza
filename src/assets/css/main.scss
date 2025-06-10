@@ -336,17 +336,20 @@ section.product-cards {
         }
 
         .product-details {
-            font-size: 1.1rem;
+
 
             .product-title {
                 color: $black-color;
                 text-transform: uppercase;
                 font-weight: 500;
+                font-size: 1.1rem;
             }
 
             small {
                 font-weight: normal;
                 display: block;
+                color: $black-color;
+                font-size: 1.2rem;
             }
         }
 

@@ -5,6 +5,7 @@ import { MainHeroSection } from "./assets/components/main_hero_section"
 import { CategoriesCard } from "./assets/components/categories_card"
 import { ProductCard } from "./assets/components/product_card"
 import { products } from './productCardData'
+import { categoryCard } from "./categoryCard"
 function App() {
 
   return (
@@ -14,10 +15,9 @@ function App() {
       <section className="categories">
         <div className="container custom-container-xl">
           <div className="row">
-            <CategoriesCard />
-            <CategoriesCard />
-            <CategoriesCard />
-            <CategoriesCard />
+            {
+              categoryCard.map(categoryCard => <CategoriesCard product={categoryCard}/>)
+            }
           </div>
         </div>
 

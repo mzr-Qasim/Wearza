@@ -1,6 +1,8 @@
 
 
-import main_hero_img from "../images/main_hero.jpg"
+
+
+import main_hero_img from "../../../public/images/main_hero.jpg"
 
 export function MainHeroSection() {
     return (
