@@ -191,6 +191,7 @@ section.categories {
 
 .categories-card {
     padding-bottom: 1.5rem;
+
     figure {
         position: relative;
         width: 100%;
@@ -305,9 +306,10 @@ section.product-cards {
                         font-size: 1.2rem;
                     }
 
-                    &:hover{
+                    &:hover {
                         background-color: $white-color;
-                        i{
+
+                        i {
                             color: $black-color;
                         }
                     }
@@ -322,7 +324,8 @@ section.product-cards {
                 .main_img {
                     opacity: 0;
                 }
-                                .product-actions {
+
+                .product-actions {
                     opacity: 1;
                 }
 
@@ -333,18 +336,17 @@ section.product-cards {
         }
 
         .product-details {
-            .product-title {
-                text-transform: uppercase;
-                color: $black-color;
+            font-size: 1.1rem;
 
-                font-size: .9rem;
+            .product-title {
+                color: $black-color;
+                text-transform: uppercase;
                 font-weight: 500;
             }
 
             small {
                 font-weight: normal;
                 display: block;
-                color: black;
             }
         }
 
