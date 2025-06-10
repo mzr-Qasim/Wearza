@@ -12335,8 +12335,8 @@ section.product-cards .product-card figure .product-actions {
   z-index: 3;
 }
 section.product-cards .product-card figure .product-actions button {
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   background-color: #000000;
   display: flex;
@@ -12345,6 +12345,7 @@ section.product-cards .product-card figure .product-actions button {
 }
 section.product-cards .product-card figure .product-actions button i {
   color: #ffffff;
+  font-size: 1.2rem;
 }
 section.product-cards .product-card figure .product-actions button:hover {
   background-color: #ffffff;

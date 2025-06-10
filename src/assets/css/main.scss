@@ -292,8 +292,8 @@ section.product-cards {
                 z-index: 3;
 
                 button {
-                    width: 2rem;
-                    height: 2rem;
+                    width: 2.5rem;
+                    height: 2.5rem;
                     border-radius: 50%;
                     background-color: $black-color;
                     display: flex;
@@ -302,6 +302,7 @@ section.product-cards {
 
                     i {
                         color: $white-color;
+                        font-size: 1.2rem;
                     }
 
                     &:hover{
