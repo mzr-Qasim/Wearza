@@ -1,5 +1,5 @@
 
-import category_card_img from "../images/category_card_1.jpg"
+import category_card_img from "../images/category_card_2.jpg"
 
 export function CategoriesCard() {
     return (

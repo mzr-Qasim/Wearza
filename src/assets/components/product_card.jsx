@@ -1,5 +1,5 @@
-import product_card_img from "../images/product-card-3.jpg"
-import card_hover_img from "../images/card-hover-3.jpg"
+import product_card_img from "../images/product-card-2.jpg"
+import card_hover_img from "../images/card-hover-2.jpg"
 
 
 
