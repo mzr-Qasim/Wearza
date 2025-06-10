@@ -4,6 +4,7 @@ import { Navbar } from "./assets/components/navbar"
 import { MainHeroSection } from "./assets/components/main_hero_section"
 import { CategoriesCard } from "./assets/components/categories_card"
 import { ProductCard } from "./assets/components/product_card"
+import { products } from './productCardData'
 function App() {
 
   return (
@@ -12,26 +13,21 @@ function App() {
       <MainHeroSection />
       <section className="categories">
         <div className="container custom-container-xl">
-      <div className="row">
-          <CategoriesCard />
-          <CategoriesCard />
-          <CategoriesCard />
-          <CategoriesCard />
+          <div className="row">
+            <CategoriesCard />
+            <CategoriesCard />
+            <CategoriesCard />
+            <CategoriesCard />
+          </div>
         </div>
-        </div>
-      
+
       </section>
       <section className="product-cards">
         <div className="container custom-container-lg">
           <div className="row">
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
+            {
+              products.map(product => <ProductCard product={product} />)
+            }
           </div>
         </div>
       </section>
