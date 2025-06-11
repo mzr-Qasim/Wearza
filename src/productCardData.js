@@ -1,7 +1,8 @@
 
 export const products = [
     {
-        "id": 1, "title": "women sweat shirt", "price": 84.95, "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday", "category": "men's clothing", "image": "/images/product-card-1.jpg", "hover_img": "/images/card-hover-1.jpg", "rating": { "rate": 3.5, "count": 120 }, "swatches": [
+        "id": 1, "title": "women sweat shirt", "price": 84.95, "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday", "category": "men's clothing", "image": "/images/product-card-1.jpg", "hover_img": "/images/card-hover-1.jpg", "rating": { "rate": 3.5, "count": 120 },
+        "swatches": [
             {
                 "color": "#000000",
                 "image": "/images/card-hover-2.jpg"

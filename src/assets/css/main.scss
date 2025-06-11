@@ -283,14 +283,12 @@ section.product-cards {
 
             .product-rating {
                 position: absolute;
-                bottom: 0;
+                top: 0;
                 right: 0;
                 margin: .5rem;
                 padding: .5rem;
                 z-index: 4;
-                background-color:                 rgba(0,0,0,0.9);
-
-
+                background-color: rgba(0, 0, 0, 0.8);
 
             }
 
@@ -344,7 +342,7 @@ section.product-cards {
                 }
 
 
-              
+
 
                 .hover_img {
                     opacity: 1;

@@ -14,7 +14,7 @@ export function ProductCard(props) {
                     <img className="main_img" src={props.product.image} loading="lazy" alt="" />
                     <img className="hover_img" src={props.product.hover_img} loading="lazy" alt="" />
                     <div className="product-rating">
-                        <Rating emptyColor={"white"} fillColor={"#F5C518"} size={20} readonly={true} allowFraction={true} initialValue={props.product.rating.rate} />
+                        <Rating emptyColor={"white"} fillColor={"#F5C518"} size={19} readonly={true} allowFraction={true} initialValue={props.product.rating.rate} />
                     </div>
 
                     <ul className="product-actions">
