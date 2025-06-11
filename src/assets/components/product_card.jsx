@@ -1,5 +1,6 @@
 
 
+import { Rating } from 'react-simple-star-rating'
 
 
 
@@ -12,6 +13,9 @@ export function ProductCard(props) {
                 <figure >
                     <img className="main_img" src={props.product.image} loading="lazy" alt="" />
                     <img className="hover_img" src={props.product.hover_img} loading="lazy" alt="" />
+                    <div className="product-rating">
+                        <Rating emptyColor={"white"} fillColor={"#F5C518"} size={20} readonly={true} allowFraction={true} initialValue={props.product.rating.rate} />
+                    </div>
 
                     <ul className="product-actions">
                         <li><button><i className="icon-favourite"></i></button></li>
@@ -21,6 +25,7 @@ export function ProductCard(props) {
                 </figure>
                 <div className="color-swatches py-2">
                     <ul>
+
                         <li>
                             <button
                                 className="swatch black active"></button>
@@ -34,7 +39,7 @@ export function ProductCard(props) {
                                 className="swatch grey"></button>
                         </li>
 
-                        
+
                     </ul>
 
                 </div>

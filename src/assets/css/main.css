@@ -12322,6 +12322,15 @@ section.product-cards .product-card figure .hover_img {
   opacity: 0;
   z-index: 2;
 }
+section.product-cards .product-card figure .product-rating {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.9);
+}
 section.product-cards .product-card figure .product-actions {
   position: absolute;
   bottom: 0;

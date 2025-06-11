@@ -266,6 +266,7 @@ section.product-cards {
                 object-fit: cover;
                 transition: opacity 0.4s ease-in-out;
 
+
             }
 
             .main_img {
@@ -276,6 +277,19 @@ section.product-cards {
             .hover_img {
                 opacity: 0;
                 z-index: 2;
+
+
+            }
+
+            .product-rating {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                margin: .5rem;
+                padding: .5rem;
+                z-index: 4;
+                background-color:                 rgba(0,0,0,0.9);
+
 
 
             }
@@ -329,11 +343,15 @@ section.product-cards {
                     opacity: 1;
                 }
 
+
+              
+
                 .hover_img {
                     opacity: 1;
                 }
             }
         }
+
 
         .product-details {
 
@@ -352,6 +370,7 @@ section.product-cards {
                 font-size: 1.2rem;
             }
         }
+
 
 
 
