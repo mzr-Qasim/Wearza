@@ -25,7 +25,7 @@ export function ProductCard(props) {
                 </figure>
                 <div className="color-swatches py-2">
                     <ul>
-
+                     
                         <li>
                             <button
                                 className="swatch black active"></button>
