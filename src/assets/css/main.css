@@ -12172,8 +12172,8 @@ img.main_hero_img {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: 1;
-  -o-object-position: top left;
-     object-position: top left;
+  -o-object-position: top center;
+     object-position: top center;
 }
 
 .main_hero_caption {
@@ -12302,6 +12302,17 @@ section.categories {
 .categories-card figure:hover img {
   scale: 1.1;
 }
+.categories-card figure::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  opacity: 0.1;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
 
 section.product-cards {
   padding-bottom: 5rem;
@@ -12420,6 +12431,12 @@ section.product-cards .product-card .product-details small, section.product-card
   }
   .nav_hambtn {
     display: block;
+  }
+}
+@media (max-width: 767px) {
+  img.main_hero_img {
+    -o-object-position: center right;
+       object-position: center right;
   }
 }
 @media (max-width: 575px) {

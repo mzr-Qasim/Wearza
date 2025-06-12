@@ -34,6 +34,12 @@
 }
 
 
+@media (max-width:767px){
+    img.main_hero_img{
+        object-position: center right;
+    }
+}
+
 
 @media (max-width:575px) {
 .nav-right {
@@ -53,3 +59,6 @@ ul{
 }
 }
 }
+
+
+

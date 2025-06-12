@@ -1,20 +1,20 @@
 
 import { useState } from "react"
-
+import { Link } from "react-router"
 import main_logo from "/images/main_logo.svg"
 
 
 
 
 export function Navbar() {
-            const [showMenu, setShowMenu] = useState(false)
-        const handleNavToggle = () =>{
-            setShowMenu(!showMenu)
-        }
-        const [showSearchMenu, setSearchShowMenu] = useState(false)
-        const handleSearchMenu = () => {
-            setSearchShowMenu(!showSearchMenu)
-        }
+    const [showMenu, setShowMenu] = useState(false)
+    const handleNavToggle = () => {
+        setShowMenu(!showMenu)
+    }
+    const [showSearchMenu, setSearchShowMenu] = useState(false)
+    const handleSearchMenu = () => {
+        setSearchShowMenu(!showSearchMenu)
+    }
     return (
         <nav className="Navbar">
             <div className="container custom-container-lg">
@@ -23,8 +23,9 @@ export function Navbar() {
                 <div className="nav-inner">
                     <div className={`nav-left ${showMenu ? 'navShow' : ''}`}>
                         <ul>
-                            <li><a href="">home</a></li>
-                            <li><a href="">shop</a></li>
+
+                            <li><Link to={"/"}>home</Link></li>
+                            <li><Link to={"shop"}>shop</Link></li>
                             <li><a href="">features</a></li>
                             <li><a href="">lookbook</a></li>
                             <li><a href="">pages</a></li>
