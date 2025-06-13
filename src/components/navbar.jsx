@@ -28,7 +28,7 @@ export function Navbar() {
                             <li><Link to={"shop"}>shop</Link></li>
                             <li><a href="">features</a></li>
                             <li><a href="">lookbook</a></li>
-                            <li><a href="">pages</a></li>
+                            <li><Link to={"about-us"}>about us</Link></li>
                             <li><a href="">blog</a></li>
                         </ul>
                     </div>

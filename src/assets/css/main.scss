@@ -13,6 +13,7 @@
     display: flex;
     padding: 5rem 0;
     align-items: flex-end;
+    
 
 
     &::after {
@@ -67,12 +68,14 @@ img.main_hero_img {
 
 nav.Navbar {
     background-color: $white-color;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     position: fixed;
+    height: 4.5rem;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 100;
+
 
     i {
         font-size: 1.1rem;
@@ -284,7 +287,7 @@ section.product-cards {
 
             .product-rating {
                 position: absolute;
-                top: 0;
+                bottom: 0;
                 right: 0;
                 margin: .5rem;
                 padding: .5rem;
@@ -381,7 +384,52 @@ section.product-cards {
 }
 
 
+// Shop Page
 
+.title-bar{
+    margin: 4.5rem 0;
+    background-color: $theme-color-2;
+    padding: 1rem 0;
+
+
+    .title-bar-inner{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        color: $black-color;
+        font-size: .8rem;
+
+        .title-bar-link{
+            color: $black-color;
+        }
+
+        span{
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: 100%;
+                margin-right: 1rem;
+                transform: translate(-50%, -50%);
+                background-color: $black-color;
+                width: 1px;
+                height: 50%;
+            }
+        }
+    }
+}
+
+.shop-page-inner{
+    display: flex;
+    .filters{
+        width: 300px;
+        padding: 1rem 2rem;
+    }
+    .product-cards{
+        flex: 1;
+    }
+}
 
 
 @import "./partials/mediaqueries"

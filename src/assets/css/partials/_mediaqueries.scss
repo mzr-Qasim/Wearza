@@ -34,10 +34,25 @@
 }
 
 
+@media (max-width:991px){
+    .shop-page-inner{
+    .filters{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        transform: translateX(-100%);
+    }
+}
+    
+}
+
+
 @media (max-width:767px){
     img.main_hero_img{
         object-position: center right;
     }
+    
 }
 
 
