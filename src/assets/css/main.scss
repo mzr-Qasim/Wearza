@@ -13,7 +13,7 @@
     display: flex;
     padding: 5rem 0;
     align-items: flex-end;
-    
+
 
 
     &::after {
@@ -386,26 +386,27 @@ section.product-cards {
 
 // Shop Page
 
-.title-bar{
+.title-bar {
     margin: 4.5rem 0;
     background-color: $theme-color-2;
     padding: 1rem 0;
 
 
-    .title-bar-inner{
+    .title-bar-inner {
         display: flex;
         align-items: center;
         gap: 2rem;
         color: $black-color;
         font-size: .8rem;
 
-        .title-bar-link{
+        .title-bar-link {
             color: $black-color;
         }
 
-        span{
+        span {
             position: relative;
-            &::after{
+
+            &::after {
                 content: '';
                 position: absolute;
                 top: 50%;
@@ -420,16 +421,44 @@ section.product-cards {
     }
 }
 
-.shop-page-inner{
+.shop-page-inner {
     display: flex;
-    .filters{
+
+    .filters {
         width: 300px;
         padding: 1rem 2rem;
+        display: flex;
+        flex-direction: column;
+
+        .filter-title {
+            text-transform: uppercase;
+            font-weight: bolder;
+        }
+
     }
-    .product-cards{
+
+    .product-cards {
         flex: 1;
+
     }
 }
+
+.Colors {
+    display: flex;
+    gap: .5rem;
+
+}
+
+.categories-filter {
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+}
+
+.filter_btn {
+    display: none;
+}
+
 
 
 @import "./partials/mediaqueries"

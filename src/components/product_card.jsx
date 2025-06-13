@@ -8,7 +8,7 @@ import { Rating } from 'react-simple-star-rating'
 export function ProductCard(props) {
 
     return (
-        <div className="col-sm-6 col-md-4 col-lg-3">
+        <div className="col-sm-6 col-md-4 col-lg-4 col-xl-3">
             <div className="product-card">
                 <figure >
                     <img className="main_img" src={props.product.image} loading="lazy" alt="" />

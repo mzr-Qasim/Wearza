@@ -1,5 +1,3 @@
-
-
 $black-color: #000000;
 $white-color: #ffffff;
 $theme-color-2: #f9f9f9;
@@ -7,47 +5,55 @@ $theme-color-2: #f9f9f9;
 
 
 
-body{
-        overflow: hidden;
+body {
+    overflow: hidden;
     overflow-y: auto;
     font-family: 'DIN Next W1G';
 
 
-      
+
 
 }
 
 
-h1, h2, h3, h4, a, ul, li, figure, button{
+h1,
+h2,
+h3,
+h4,
+a,
+ul,
+li,
+figure,
+button {
     margin: 0;
     padding: 0;
 }
 
-ul{
+ul {
     list-style-type: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-button{
+button {
     border: 0;
     background-color: transparent;
 }
 
 
 
-.custom-container-lg{
+.custom-container-lg {
     max-width: 1400px;
 }
 
-.custom-container-xl{
+.custom-container-xl {
     max-width: 1800px;
 }
 
 
-.theme-btn{
+.theme-btn {
     display: inline-block;
     padding: .75rem 1.75rem;
     width: fit-content;
@@ -57,58 +63,121 @@ button{
     font-size: .8rem;
 }
 
-.primary_btn{
+.primary_btn {
     background-color: $black-color;
     color: $white-color;
     border: 1px solid $black-color;
 
-  
 
-    &:hover{
+
+    &:hover {
         background-color: $white-color;
         color: $black-color;
     }
 }
 
-.secondary_btn{
+.secondary_btn {
     color: $white-color;
     background-color: $black-color;
     border: 1px solid $white-color;
 
-    &:hover{
+    &:hover {
         background-color: $white-color;
         color: $black-color;
     }
 }
 
+// Radio Buttons
+
+.form-check-input:checked[type=radio] {
+    --bs-form-check-bg-image: none;
+    background-color: $black-color;
+    border-color: $black-color;
+
+
+}
+
+.form-check-input:focus {
+    border-color: none;
+    outline: 0;
+    box-shadow: none;
+}
+
+.form-check-input[type=radio] {
+    border-radius: 0;
+
+}
+
+
+// Radio buttons color categories
+
+.color_theme_radio {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.theme-radio-checked:checked[type=radio] {
+    background-color: transparent;
+    border: 4px solid black;
+}
+
+.purple_radio {
+    background-color: purple;
+}
+
+.green_radio {
+    background-color: green;
+}
+
+.red_radio {
+    background-color: red;
+}
+
+.black_radio {
+    background-color: $black-color;
+}
+
+.cyan_radio {
+    background-color: cyan;
+}
+
+.emerald_radio {
+    background-color: #50C878;
+}
+
+.orange_radio {
+    background-color: orange;
+}
 
 
 // color swatches
 
 
- .color-swatches {
-            ul {
-                display: flex;
-                gap: .5rem;
-                
-            }
-        }
+.color-swatches {
+    ul {
+        display: flex;
+        gap: .5rem;
 
-.swatch{
+    }
+}
+
+.swatch {
     display: inline-block;
     width: 2.2rem;
     height: 1.1rem;
-            border: 2px solid rgb(197, 197, 197);
+    border: 2px solid rgb(197, 197, 197);
 
 
 
-    &.black{
+    &.black {
         background-color: $black-color;
     }
-    &.brown{
+
+    &.brown {
         background-color: brown;
     }
-    &.grey{
+
+    &.grey {
         background-color: grey;
     }
 }

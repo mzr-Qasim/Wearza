@@ -11,10 +11,7 @@ export function Navbar() {
     const handleNavToggle = () => {
         setShowMenu(!showMenu)
     }
-    const [showSearchMenu, setSearchShowMenu] = useState(false)
-    const handleSearchMenu = () => {
-        setSearchShowMenu(!showSearchMenu)
-    }
+   
     return (
         <nav className="Navbar">
             <div className="container custom-container-lg">
@@ -35,7 +32,7 @@ export function Navbar() {
                     <a href="" className="main_logo"><img src={main_logo} alt="" /></a>
                     <div className="nav-right sm-hide">
                         <ul>
-                            <li><button className="nav-right-items" onClick={handleSearchMenu}><i className="icon-search"></i><span>Search</span></button></li>
+                            <li><button className="nav-right-items"><i className="icon-search"></i><span>Search</span></button></li>
                             <li><a href="" className="nav-right-items"><i className="icon-user"></i><span>account</span></a></li>
                             <li><a href="" className="nav-right-items selected-items"><i className="icon-favourite"></i><span>wishlist</span></a></li>
                             <li><a href="" className="nav-right-items selected-items"><i className="icon-cart"></i><span>cart</span></a></li>

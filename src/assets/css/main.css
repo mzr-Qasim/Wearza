@@ -12062,7 +12062,18 @@ body {
   font-family: "DIN Next W1G";
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, a, ul, li, figure, button {
+h1, .h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+a,
+ul,
+li,
+figure,
+button {
   margin: 0;
   padding: 0;
 }
@@ -12117,6 +12128,60 @@ button {
 .secondary_btn:hover {
   background-color: #ffffff;
   color: #000000;
+}
+
+.form-check-input:checked[type=radio] {
+  --bs-form-check-bg-image: none;
+  background-color: #000000;
+  border-color: #000000;
+}
+
+.form-check-input:focus {
+  border-color: none;
+  outline: 0;
+  box-shadow: none;
+}
+
+.form-check-input[type=radio] {
+  border-radius: 0;
+}
+
+.color_theme_radio {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.theme-radio-checked:checked[type=radio] {
+  background-color: transparent;
+  border: 4px solid black;
+}
+
+.purple_radio {
+  background-color: purple;
+}
+
+.green_radio {
+  background-color: green;
+}
+
+.red_radio {
+  background-color: red;
+}
+
+.black_radio {
+  background-color: #000000;
+}
+
+.cyan_radio {
+  background-color: cyan;
+}
+
+.emerald_radio {
+  background-color: #50C878;
+}
+
+.orange_radio {
+  background-color: orange;
 }
 
 .color-swatches ul {
@@ -12443,9 +12508,28 @@ section.product-cards .product-card .product-details small, section.product-card
 .shop-page-inner .filters {
   width: 300px;
   padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.shop-page-inner .filters .filter-title {
+  text-transform: uppercase;
+  font-weight: bolder;
 }
 .shop-page-inner .product-cards {
   flex: 1;
+}
+
+.Colors {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.categories-filter:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.filter_btn {
+  display: none;
 }
 
 @media (max-width: 1150px) {
@@ -12456,7 +12540,7 @@ section.product-cards .product-card .product-details small, section.product-card
     align-items: center;
     top: 0;
     left: 0;
-    width: 270px;
+    width: 300px;
     height: 100vh;
     background-color: #ffffff;
     z-index: 100;
@@ -12477,11 +12561,20 @@ section.product-cards .product-card .product-details small, section.product-card
 }
 @media (max-width: 991px) {
   .shop-page-inner .filters {
+    overflow: hidden;
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
+    padding: 6rem 2rem;
+    overflow-y: auto;
     transform: translateX(-100%);
+    background-color: #ffffff;
+    z-index: 99;
+    transition: all ease-in-out 0.5s;
+  }
+  .shop-page-inner .filter_btn {
+    display: block;
   }
 }
 @media (max-width: 767px) {
