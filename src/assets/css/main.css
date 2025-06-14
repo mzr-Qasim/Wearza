@@ -4,6 +4,7 @@
  * Copyright 2011-2025 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -12136,13 +12137,13 @@ button {
 }
 
 .secondary_btn {
-  color: #ffffff;
-  background-color: #000000;
+  color: #000000;
+  background-color: #ffffff;
   border: 1px solid #ffffff;
 }
 .secondary_btn:hover {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .form-check-input:checked[type=radio] {
@@ -12197,6 +12198,10 @@ button {
 
 .orange_radio {
   background-color: orange;
+}
+
+.form-range {
+  color: purple;
 }
 
 .color-swatches ul {
@@ -12391,6 +12396,8 @@ section.categories {
 }
 .categories-card figure figcaption h4, .categories-card figure figcaption .h4 {
   text-transform: uppercase;
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  font-weight: bolder;
 }
 .categories-card figure:hover img {
   scale: 1.1;

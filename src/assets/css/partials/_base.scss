@@ -92,13 +92,13 @@ button {
 }
 
 .secondary_btn {
-    color: $white-color;
-    background-color: $black-color;
+    color: $black-color;
+    background-color: $white-color;
     border: 1px solid $white-color;
 
     &:hover {
-        background-color: $white-color;
-        color: $black-color;
+        background-color: $black-color;
+        color: $white-color;
     }
 }
 
@@ -164,7 +164,9 @@ button {
     background-color: orange;
 }
 
-
+.form-range{
+    color: purple;
+}
 // color swatches
 
 

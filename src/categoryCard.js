@@ -6,7 +6,7 @@
 
         { "id": 3, "title": "wedding", "category": "men's clothing", "image": "/images/category_card_3.jpg" },
 
-        { "id": 4, "title": "accessories", "category": "men's clothing", "image": "/images/category_card_4.jpg" }
+        { "id": 4, "title": "jewelry", "category": "men's clothing", "image": "/images/category_card_4.jpg" }
 
        
 
