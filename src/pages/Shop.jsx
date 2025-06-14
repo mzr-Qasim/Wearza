@@ -5,7 +5,7 @@ import { products } from '../productCardData'
 
 function Shop() {
     const [showFilter, setShowFilter] = useState(false)
-    const handleFilter  = () => {
+    const handleFilter = () => {
         setShowFilter(!showFilter)
     }
     return (
@@ -46,6 +46,12 @@ function Shop() {
                                 <input className="form-check-input orange_radio color_theme_radio theme-radio-checked" type="radio" name="flexRadioDefault1" id="flexRadioDefault7" />
                             </div>
                         </div>
+                    </div>
+
+                    <div className="Price-filter pb-4">
+                            <strong className="filter-title">price</strong>
+                        {/* <label for="customRange2" class="form-label">Example range</label> */}
+                        <input type="range" class="form-range" min="0" max="5" id="customRange2"/>
                     </div>
 
 
@@ -106,36 +112,36 @@ function Shop() {
                     </div>
                     <div className="categories Varaint Sizes">
                         <strong className="filter-title">size</strong>
-                            <div className="form-check categories-filter pt-3">
-                                <input className="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault16" />
-                                <label className="form-check-label" for="flexRadioDefault16">
-                                    XS
-                                </label>
-                            </div>
-                            <div className="form-check categories-filter">
-                                <input className="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault17" />
-                                <label className="form-check-label" for="flexRadioDefault17">
-                                    S
-                                </label>
-                            </div>
-                            <div className="form-check categories-filter">
-                                <input className="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault18" />
-                                <label className="form-check-label" for="flexRadioDefault18">
-                                    M
-                                </label>
-                            </div>
-                            <div className="form-check categories-filter">
-                                <input className="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault19" />
-                                <label className="form-check-label" for="flexRadioDefault19">
-                                    L
-                                </label>
-                            </div>
-                            <div className="form-check categories-filter">
-                                <input className="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault20" />
-                                <label className="form-check-label" for="flexRadioDefault20">
-                                    XL
-                                </label>
-                            </div>
+                        <div className="form-check categories-filter pt-3">
+                            <input className="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault16" />
+                            <label className="form-check-label" for="flexRadioDefault16">
+                                XS
+                            </label>
+                        </div>
+                        <div className="form-check categories-filter">
+                            <input className="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault17" />
+                            <label className="form-check-label" for="flexRadioDefault17">
+                                S
+                            </label>
+                        </div>
+                        <div className="form-check categories-filter">
+                            <input className="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault18" />
+                            <label className="form-check-label" for="flexRadioDefault18">
+                                M
+                            </label>
+                        </div>
+                        <div className="form-check categories-filter">
+                            <input className="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault19" />
+                            <label className="form-check-label" for="flexRadioDefault19">
+                                L
+                            </label>
+                        </div>
+                        <div className="form-check categories-filter">
+                            <input className="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault20" />
+                            <label className="form-check-label" for="flexRadioDefault20">
+                                XL
+                            </label>
+                        </div>
                     </div>
                 </div>
                 <section className="product-cards">

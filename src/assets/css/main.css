@@ -12099,6 +12099,21 @@ button {
   max-width: 1800px;
 }
 
+.section-title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
+.section-title h4, .section-title .h4 {
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
+  font-weight: 500;
+}
+.section-title p {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-weight: lighter;
+}
+
 .theme-btn {
   display: inline-block;
   padding: 0.75rem 1.75rem;
@@ -12470,6 +12485,10 @@ section.product-cards .product-card .product-details small, section.product-card
   display: block;
   color: #000000;
   font-size: 1.2rem;
+}
+section.product-cards .shop-all-btn {
+  display: flex;
+  justify-content: center;
 }
 
 .title-bar {
