@@ -35,6 +35,7 @@
 
 
 @media (max-width:991px) {
+
     .shop-page-inner {
         .filters {
             overflow: hidden;
@@ -59,8 +60,50 @@
 
 
 @media (max-width:767px) {
+    .main_hero_inner {
+        position: relative;
+        min-height: 95vh;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 0;
+        justify-content: flex-end;
+        align-items: flex-start;
+
+
+
+
+        &::after {
+
+            background: none;
+        }
+    }
+
     img.main_hero_img {
-        object-position: center right;
+        position: static;
+        width: 100%;
+        height: 400px;
+        object-position: top right;
+
+    }
+
+    .main_hero_caption {
+        padding: 2rem 0;
+
+
+        .caption-inner {
+            width: 100%;
+        }
+    }
+
+    section.product-cards {
+        .product-card {
+            figure {
+                .product-actions {
+
+                    opacity: 1;
+                }
+            }
+        }
     }
 
 }

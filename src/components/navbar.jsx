@@ -7,6 +7,7 @@ import main_logo from "/images/main_logo.svg"
 
 
 export function Navbar() {
+
     const [showMenu, setShowMenu] = useState(false)
     const handleNavToggle = () => {
         setShowMenu(!showMenu)

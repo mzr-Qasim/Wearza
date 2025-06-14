@@ -50,8 +50,7 @@ function Shop() {
 
                     <div className="Price-filter pb-4">
                             <strong className="filter-title">price</strong>
-                        {/* <label for="customRange2" class="form-label">Example range</label> */}
-                        <input type="range" class="form-range" min="0" max="5" id="customRange2"/>
+                        <input type="range" className="form-range" min="0" max="5" id="customRange2"/>
                     </div>
 
 
