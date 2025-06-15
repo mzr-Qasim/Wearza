@@ -12074,6 +12074,7 @@ a,
 ul,
 li,
 figure,
+p,
 button {
   margin: 0;
   padding: 0;
@@ -12274,7 +12275,7 @@ img.main_hero_img {
   width: 100%;
 }
 .main_hero_caption .caption-inner {
-  width: 60%;
+  width: 50%;
 }
 .main_hero_caption h2, .main_hero_caption .h2 {
   font-size: clamp(2.5rem, 4vw, 6rem);
@@ -12714,7 +12715,7 @@ section.product-cards .shop-all-btn {
     padding-bottom: 0.5rem;
   }
   .main_hero_caption .caption-inner p {
-    padding-bottom: 0.5rem;
+    padding-bottom: 1rem;
   }
   section.product-cards .product-card figure .product-actions {
     opacity: 1;

@@ -13,7 +13,7 @@ export function MainHeroSection() {
                     <div className="container custom-container-lg">
                         <div className="caption-inner">
                             <h2>New Arrivals</h2>
-                            <p >Delicate fabrics and a neutral colour<br />palette are the details that give these pieces an edge.</p>
+                            <p >Delicate fabrics and a neutral colour palette are the details that give these pieces an edge.</p>
                             <a href="" className="theme-btn primary_btn">shop now</a>
                         </div>
 
