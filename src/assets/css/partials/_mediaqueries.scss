@@ -38,17 +38,19 @@
 
     .shop-page-inner {
         .filters {
-            overflow: hidden;
             position: fixed;
             top: 0;
-            left: 0;
+            right: 0;
             height: 100vh;
-            padding: 6rem 2rem;
-            overflow-y: auto;
-            transform: translateX(-100%);
+            padding: 4rem 2rem;
+            overflow-y: auto!important;
+            transform: translateX(100%);
             background-color: $white-color;
-            z-index: 99;
+            z-index: 200;
             transition: all ease-in-out .5s;
+            .menu_close{
+                display: block;
+            }
         }
 
         .filter_btn {
@@ -87,11 +89,16 @@
     }
 
     .main_hero_caption {
-        padding: 2rem 0;
-
+        padding: 1rem 0;
 
         .caption-inner {
             width: 100%;
+            h2{
+                padding-bottom: .5rem;
+            }
+            p{
+                padding-bottom: .5rem;
+            }
         }
     }
 
@@ -127,4 +134,5 @@
             }
         }
     }
+    
 }

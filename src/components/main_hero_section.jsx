@@ -12,12 +12,12 @@ export function MainHeroSection() {
                 <div className="main_hero_caption">
                     <div className="container custom-container-lg">
                         <div className="caption-inner">
-         <h2 className="pb-3">New Arrivals</h2>
-                            <p className="pb-3">Delicate fabrics and a neutral colour<br />palette are the details that give these pieces an edge.</p>
+                            <h2>New Arrivals</h2>
+                            <p >Delicate fabrics and a neutral colour<br />palette are the details that give these pieces an edge.</p>
                             <a href="" className="theme-btn primary_btn">shop now</a>
                         </div>
-                           
-                            
+
+
                     </div>
                 </div>
             </div>

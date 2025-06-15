@@ -21,6 +21,7 @@ function Shop() {
             </div>
             <div className="shop-page-inner">
                 <div className={`filters ${showFilter ? 'navShow' : ''}`}>
+                    <button className="menu_close" onClick={handleFilter}><i className="icon-ham_close_btn"></i></button>
                     <strong className="filter-title">Color</strong>
                     <div className="colors-inner pb-4">
                         <div className="Colors Varaint pt-3">
@@ -42,15 +43,12 @@ function Shop() {
                             <div className="form-check categories-filter">
                                 <input className="form-check-input emerald_radio color_theme_radio theme-radio-checked" type="radio" name="flexRadioDefault1" id="flexRadioDefault6" />
                             </div>
-                            <div className="form-check categories-filter">
-                                <input className="form-check-input orange_radio color_theme_radio theme-radio-checked" type="radio" name="flexRadioDefault1" id="flexRadioDefault7" />
-                            </div>
                         </div>
                     </div>
 
                     <div className="Price-filter pb-4">
-                            <strong className="filter-title">price</strong>
-                        <input type="range" className="form-range" min="0" max="5" id="customRange2"/>
+                        <strong className="filter-title">price</strong>
+                        <input type="range" className="form-range" min="0" max="5" id="customRange2" />
                     </div>
 
 

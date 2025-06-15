@@ -30,7 +30,7 @@
         // opacity: .2;
 
 
-background: linear-gradient(90deg,rgba(255, 255, 255, .9) 15%, rgba(255, 255, 255, 0) 100%);
+        background: linear-gradient(90deg, rgba(255, 255, 255, .9) 15%, rgba(255, 255, 255, 0) 100%);
 
         z-index: 2;
     }
@@ -55,18 +55,20 @@ img.main_hero_img {
     z-index: 3;
     color: $black-color;
     width: 100%;
-    .caption-inner{
+
+    .caption-inner {
         width: 60%;
     }
 
- 
+
 
     h2 {
-        font-size: clamp(3rem, 4vw, 6rem);
+        font-size: clamp(2.5rem, 4vw, 6rem);
         letter-spacing: .2rem;
         font-weight: 500;
         // font-family: "Noto Nastaliq Urdu", serif;
         //   font-family: "Noto Sans Arabic", sans-serif;
+        padding-bottom: 1rem;
 
 
 
@@ -74,8 +76,9 @@ img.main_hero_img {
 
     p {
         letter-spacing: .1rem;
-        font-size: clamp(1.5rem, 4vw, 1.8rem);
+        font-size: clamp(1.2rem, 2vw, 1.8rem);
         font-weight: 300;
+        padding-bottom: 1rem;
     }
 }
 
@@ -196,12 +199,60 @@ nav.Navbar {
     }
 }
 
+
 .navShow {
     transform: translateX(0) !important;
 }
 
 // Search Menu
+.searchMenu {
+    min-height: 50vh;
+    background-color: $white-color;
+    width: 100%;
+    z-index: 200;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    transition: all ease-in-out .5s;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+
+}
+
+.search-bar-inner {
+    width: 100%;
+}
+
+.search-input-inner {
+    position: relative;
+
+    .search_query {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+}
+
+.searchInput {
+    width: 100%;
+    padding: .5rem 0;
+    padding-right: 2rem;
+    border: 0;
+    border-bottom: 1px solid $black-color ;
+    outline: none;
+    position: relative;
+
+
+}
+
+.searchbarshow {
+    transform: translateY(0);
+}
 
 // Category Section
 
@@ -413,6 +464,25 @@ section.product-cards {
 
 }
 
+.quick-view {
+    background-color: $white-color;
+    min-height: 60vh;
+    width: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+
+}
+
+.show-quick-view {
+    opacity: 1;
+    pointer-events: all;
+
+}
 
 // Shop Page
 
@@ -460,6 +530,13 @@ section.product-cards {
         display: flex;
         flex-direction: column;
 
+        .menu_close {
+            display: none;
+            // position: absolute;
+            // top: 6rem;
+            // right: 1rem;
+        }
+
         .filter-title {
             text-transform: uppercase;
             font-weight: bolder;
@@ -475,6 +552,7 @@ section.product-cards {
 
 .Colors {
     display: flex;
+    flex-wrap: wrap;
     gap: .5rem;
 
 }
