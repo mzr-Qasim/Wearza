@@ -6,6 +6,8 @@ import { ProductCard } from "../components/product_card"
 import { products } from '../productCardData'
 import { categoryCard } from "../categoryCard"
 import { Link } from "react-router"
+import { StyleShowCaseCard } from "../components/style_showcase"
+import { showCaseCard } from "../styleshowcase"
 
 
 
@@ -37,6 +39,15 @@ function Home() {
         </div>
         <div className="shop-all-btn">
           <Link className="theme-btn primary_btn">shop all</Link>
+        </div>
+      </section>
+      <section className="style-showcase">
+        <div className="container custom-container-lg">
+          <div className="row">
+            {
+              showCaseCard.map(product => <StyleShowCaseCard product= {product}/> )
+            }
+          </div>
         </div>
       </section>
     </>
