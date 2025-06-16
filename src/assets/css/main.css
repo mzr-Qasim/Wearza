@@ -12592,7 +12592,7 @@ section.style-showcase .showcasecard {
 }
 section.style-showcase .showcasecard figure {
   width: 100%;
-  aspect-ratio: 1/1.15;
+  aspect-ratio: 2/2.3;
   overflow: hidden;
 }
 section.style-showcase .showcasecard figure video {
@@ -12780,8 +12780,14 @@ section.seasonal-section .seasonal-section-inner .seasonal-caption h2, section.s
   .nav_hambtn {
     display: block;
   }
+  section.style-showcase .showcasecard figure {
+    aspect-ratio: 2/2.7;
+  }
 }
 @media (max-width: 991px) {
+  section.style-showcase .showcasecard figure {
+    aspect-ratio: 2/3;
+  }
   .shop-page-inner .filters {
     position: fixed;
     top: 0;
@@ -12835,6 +12841,9 @@ section.seasonal-section .seasonal-section-inner .seasonal-caption h2, section.s
   }
   section.product-cards .product-card figure .product-actions {
     opacity: 1;
+  }
+  section.style-showcase .showcasecard figure {
+    aspect-ratio: 2/2.2;
   }
 }
 @media (max-width: 575px) {

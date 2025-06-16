@@ -30,11 +30,27 @@
     .nav_hambtn {
         display: block;
     }
+    section.style-showcase {
+        .showcasecard {
+            figure {
+                aspect-ratio: 2 / 2.7;
+            }
+        }
+    }
+
+    
 
 }
 
 
 @media (max-width:991px) {
+     section.style-showcase {
+        .showcasecard {
+            figure {
+                aspect-ratio: 2 / 3;
+            }
+        }
+    }
     .shop-page-inner {
         .filters {
             position: fixed;
@@ -114,13 +130,14 @@
             }
         }
     }
+     section.style-showcase {
+        .showcasecard {
+            figure {
+                aspect-ratio: 2 / 2.2;
+            }
+        }
+    }
 
-    //     .style-showcase{
-    //     figure{
-    //         width: 100%;
-    //         aspect-ratio: 1/1.1;
-    //     }
-    // }
 
 }
 
@@ -143,6 +160,8 @@
             }
         }
     }
+
+   
 
     section.seasonal-section {
         .seasonal-section-inner {
