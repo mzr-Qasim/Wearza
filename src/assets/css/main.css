@@ -12812,4 +12812,8 @@ section.seasonal-section .seasonal-section-inner .seasonal-caption h2, section.s
   .nav-right ul span {
     display: block !important;
   }
+  section.seasonal-section .seasonal-section-inner .seasonal-caption {
+    align-items: flex-start;
+    padding: 0 1rem;
+  }
 }/*# sourceMappingURL=main.css.map */

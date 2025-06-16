@@ -47,7 +47,8 @@
             background-color: $white-color;
             z-index: 200;
             transition: all ease-in-out .5s;
-            .menu_close{
+
+            .menu_close {
                 display: block;
             }
         }
@@ -92,10 +93,12 @@
 
         .caption-inner {
             width: 100%;
-            h2{
+
+            h2 {
                 padding-bottom: .5rem;
             }
-            p{
+
+            p {
                 padding-bottom: 1rem;
             }
         }
@@ -111,12 +114,13 @@
             }
         }
     }
-//     .style-showcase{
-//     figure{
-//         width: 100%;
-//         aspect-ratio: 1/1.1;
-//     }
-// }
+
+    //     .style-showcase{
+    //     figure{
+    //         width: 100%;
+    //         aspect-ratio: 1/1.1;
+    //     }
+    // }
 
 }
 
@@ -139,5 +143,15 @@
             }
         }
     }
-    
+
+    section.seasonal-section {
+        .seasonal-section-inner {
+            .seasonal-caption {
+                align-items: flex-start;
+                padding: 0 1rem;
+            }
+        }
+    }
+
+
 }
