@@ -38,15 +38,23 @@ function Home() {
           </div>
         </div>
         <div className="shop-all-btn">
-          <Link className="theme-btn primary_btn">shop all</Link>
+          <Link className="theme-btn tertiary_btn">shop all</Link>
         </div>
       </section>
       <section className="style-showcase">
         <div className="container custom-container-lg">
           <div className="row">
             {
-              showCaseCard.map(product => <StyleShowCaseCard product= {product}/> )
+              showCaseCard.map(product => <StyleShowCaseCard product={product} />)
             }
+          </div>
+        </div>
+      </section>
+      <section className="seasonal-section">
+        <div className="seasonal-section-inner">
+          <div className="seasonal-caption">
+            <h2 className="pb-3">new for spring</h2>
+            <a href="" className="theme-btn primary_btn">shop now</a>
           </div>
         </div>
       </section>

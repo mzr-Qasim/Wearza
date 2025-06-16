@@ -35,7 +35,6 @@
 
 
 @media (max-width:991px) {
-
     .shop-page-inner {
         .filters {
             position: fixed;
@@ -43,7 +42,7 @@
             right: 0;
             height: 100vh;
             padding: 4rem 2rem;
-            overflow-y: auto!important;
+            overflow-y: auto;
             transform: translateX(100%);
             background-color: $white-color;
             z-index: 200;

@@ -467,7 +467,7 @@ section.product-cards {
 .quick-view {
     background-color: $white-color;
     min-height: 60vh;
-    width: 50%;
+    width: 70%;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -486,14 +486,75 @@ section.product-cards {
 
 // Style Showcase Section
 
-.style-showcase{
-    figure{
+section.style-showcase {
+    padding-bottom: $section-space-md;
+
+    .showcasecard {
+        padding-bottom: 2rem;
+
+        figure {
+            width: 100%;
+            aspect-ratio: 1/1.15;
+            overflow: hidden;
+
+            video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        figcaption {
+            color: $black-color;
+
+            h4 {
+                font-size: clamp(1.3rem, 2vw, 1.6rem);
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+// Seasonal Section
+
+section.seasonal-section {
+    padding-bottom: $section-space-md;
+
+    .seasonal-section-inner {
+        padding: 2rem 0;
+        position: relative;
+        background: url('/images/seasonal-section.jpg');
+        background-attachment: fixed;
+        object-fit: cover;
         width: 100%;
-        aspect-ratio: 1/1.2;
-        video{
+        height: 75vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        background-position: center;
+
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            background-color: $black-color;
+            opacity: .3;
+            z-index: 1;
+        }
+        .seasonal-caption{
+            color: $white-color;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 2;
+
+            h2{
+                font-size: clamp(3em, 5vw, 7rem);
+                text-transform: uppercase;
+            }
         }
     }
 }

@@ -2,7 +2,7 @@ $black-color: #000000;
 $white-color: #ffffff;
 $theme-color-2: #f9f9f9;
 
-
+$section-space-md: 5rem;
 
 
 body {
@@ -103,6 +103,16 @@ button {
     }
 }
 
+.tertiary_btn {
+    color: $black-color;
+    border: 1px solid $black-color;
+
+    &:hover {
+        background-color: $black-color;
+        color: $white-color;
+    }
+}
+
 // Radio Buttons
 
 .form-check-input:checked[type=radio] {
@@ -181,8 +191,9 @@ button {
 
 .swatch {
     display: inline-block;
-    width: 2.2rem;
-    height: 1.1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
     border: 2px solid rgb(197, 197, 197);
 
 
