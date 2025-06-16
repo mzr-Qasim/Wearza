@@ -5,7 +5,7 @@ import Home from "./pages/Home"
 import {Navbar} from "./components/navbar"
 import Shop  from './pages/Shop';
 import AboutUs from './pages/About-us';
-import { ProductDetail } from './pages/Product-Detail';
+import ProductDetail  from './pages/product-detail';
 
 function App() {
   return (

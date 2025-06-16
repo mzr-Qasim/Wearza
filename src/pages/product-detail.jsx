@@ -10,7 +10,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-export function ProductDetail() {
+function ProductDetail() {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
     return (
@@ -108,3 +108,6 @@ export function ProductDetail() {
         </>
     );
 }
+
+
+export default ProductDetail
