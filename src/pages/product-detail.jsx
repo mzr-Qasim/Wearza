@@ -19,7 +19,7 @@ export function ProductDetail() {
                 <div className="container custom-container-lg">
                     <div className="title-bar-inner">
                         <Link className="title-bar-link" to={"/"}>
-                            Home
+                            Home  
                         </Link>
                         <span>Product</span>
                     </div>
