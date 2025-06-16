@@ -12713,6 +12713,47 @@ section.seasonal-section .seasonal-section-inner .seasonal-caption h2, section.s
   display: none;
 }
 
+.product-detail-inner {
+  padding-bottom: 20rem;
+}
+
+.view-section {
+  min-height: 100%;
+  padding-bottom: 2rem;
+}
+
+.product-gallery .gallery-swiper .swiper-button-prev {
+  color: #000000;
+}
+.product-gallery .gallery-swiper .swiper-button-next {
+  color: #000000;
+}
+.product-gallery .gallery-swiper .swiper-slide figure {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+.product-gallery .gallery-swiper .swiper-slide figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.swiper-thumbnails .swiper-slide img {
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  cursor: pointer;
+}
+
+.product-summary {
+  color: #000000;
+  height: 100%;
+}
+
 @media (max-width: 1150px) {
   .nav-left {
     position: fixed;
