@@ -5,7 +5,8 @@ import Home from "./pages/Home"
 import {Navbar} from "./components/navbar"
 import Shop  from './pages/Shop';
 import AboutUs from './pages/About-us';
-import ProductDetail  from './pages/product-detail';
+import ProductDetail from './pages/product-detail';
+
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop/>} />
         <Route path="/about-us" element={<AboutUs/>} />
-        <Route path="/product" element={<ProductDetail/>} />
+        <Route path="/products/:id" element={<ProductDetail/>} />
       </Routes>
     </BrowserRouter>
   );

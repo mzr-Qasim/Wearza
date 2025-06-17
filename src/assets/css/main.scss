@@ -648,7 +648,7 @@ section.seasonal-section {
 // Product Detail Page
 
 .product-detail-inner {
-    padding-bottom: 20rem;
+    padding-bottom: $section-space-md;
 }
 
 .view-section {
@@ -657,43 +657,55 @@ section.seasonal-section {
 }
 
 .product-gallery {
-    .gallery-swiper {
-        .swiper-button-prev {
-            color: $black-color;
-        }
-
-        .swiper-button-next {
-            color: $black-color;
-        }
-
-        .swiper-slide {
-            figure {
+    .product-card{
+        figure{
+            width: 100%;
+            aspect-ratio: 1/1.5;
+            img{
                 width: 100%;
-                aspect-ratio: 1/1;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    object-position: center;
-                }
+                height: 100%;
+                object-fit: cover;
             }
         }
     }
+    // .gallery-swiper {
+    //     .swiper-button-prev {
+    //         color: $black-color;
+    //     }
+
+    //     .swiper-button-next {
+    //         color: $black-color;
+    //     }
+
+    //     .swiper-slide {
+    //         figure {
+    //             width: 100%;
+    //             aspect-ratio: 1/.8;
+
+    //             img {
+    //                 width: 100%;
+    //                 height: 100%;
+    //                 object-fit: cover;
+    //                 object-position: top;
+    //             }
+    //         }
+    //     }
+    // }
 
 }
 
 
-.swiper-thumbnails {
-    .swiper-slide {
-        img {
-            height: 250px;
-            object-fit: cover;
-            width: 100%;
-            cursor: pointer;
-        }
-    }
-}
+// .swiper-thumbnails {
+//     .swiper-slide {
+//         img {
+//             height: 250px;
+//             object-fit: cover;
+//             width: 100%;
+//             cursor: pointer;
+//             object-position: center;
+//         }
+//     }
+// }
 
 .product-summary {
     color: $black-color;

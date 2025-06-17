@@ -15,7 +15,7 @@ export function ProductCard(props) {
     return (
         <div className="col-sm-6 col-md-4 col-lg-4 col-xl-3">
             <div className="product-card">
-                <Link to={"/product"}>
+                <Link to={`/products/${props.product.id}`}>
                     <figure >
                         <img className="main_img" src={props.product.image} loading="lazy" alt="" />
                         <img className="hover_img" src={props.product.hover_img} loading="lazy" alt="" />
