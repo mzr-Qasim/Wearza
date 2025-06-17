@@ -657,55 +657,41 @@ section.seasonal-section {
 }
 
 .product-gallery {
-    .product-card{
-        figure{
-            width: 100%;
-            aspect-ratio: 1/1.5;
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-    }
-    // .gallery-swiper {
-    //     .swiper-button-prev {
-    //         color: $black-color;
-    //     }
-
-    //     .swiper-button-next {
-    //         color: $black-color;
-    //     }
-
-    //     .swiper-slide {
-    //         figure {
+    // .product-card{
+    //     figure{
+    //         width: 100%;
+    //         aspect-ratio: 1/1.5;
+    //         img{
     //             width: 100%;
-    //             aspect-ratio: 1/.8;
-
-    //             img {
-    //                 width: 100%;
-    //                 height: 100%;
-    //                 object-fit: cover;
-    //                 object-position: top;
-    //             }
+    //             height: 100%;
+    //             object-fit: cover;
     //         }
     //     }
     // }
+    .gallery-swiper {
+        .swiper-button-prev {
+            color: $black-color;
+        }
+
+        .swiper-button-next {
+            color: $black-color;
+        }
+
+        .swiper-slide {
+            figure {
+                width: 100%;
+                aspect-ratio: 1/1.4;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
 
 }
-
-
-// .swiper-thumbnails {
-//     .swiper-slide {
-//         img {
-//             height: 250px;
-//             object-fit: cover;
-//             width: 100%;
-//             cursor: pointer;
-//             object-position: center;
-//         }
-//     }
-// }
 
 .product-summary {
     color: $black-color;

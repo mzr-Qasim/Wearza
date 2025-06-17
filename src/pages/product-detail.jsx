@@ -29,41 +29,34 @@ function ProductDetail() {
                         <Link className="title-bar-link" to={"/"}>
                             Home
                         </Link>
-                        <span>Product</span>
+                        <span>{foundProduct.title}</span>
                     </div>
                 </div>
             </div>
             <section className="product-detail-wrapper">
-                <div className="container custom-container-lg">
+                <div className="container custom-container-xl">
                     <div className="product-detail-inner">
                         <div className="row">
                             <div className="col-md-12 col-lg-8">
-                                <div className="product-gallery view-section">
-                                    <div className="row">
-                                        <div className="col-md-6 col-lg-6">
-                                            <div className="product-card">
-                                                <figure>
-                                                    <img src={foundProduct.image} alt="" />
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-6 col-lg-6">
-                                            <div className="product-card">
-                                                <figure>
-                                                    <img src={foundProduct.hover_img} alt="" />
-                                                </figure>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* <Swiper className="gallery-swiper"
+                                <div className="product-gallery view-section">   
+                                    <Swiper className="gallery-swiper"
                                         // spaceBetween={10}
                                         navigation
                                         loop={true}
                                         thumbs={{ swiper: thumbsSwiper }}
-                                        modules={[Navigation, Thumbs]}
+                                        modules={[Navigation]}
+                                        spaceBetween={10}
+                                        slidesPerView={2}
                                         style={{ width: "100%" }}
                                         autoHeight={true}
+                                        breakpoints={{
+                                            0: {
+                                                slidesPerView: 1, // For screens from 0px to 575px
+                                            },
+                                            576: {
+                                                slidesPerView: 2, // Default value or larger screens
+                                            },
+                                        }}
                                     >
                                         <SwiperSlide>
                                             <figure>
@@ -82,27 +75,6 @@ function ProductDetail() {
                                             </figure>
                                         </SwiperSlide>
                                     </Swiper>
-                                    <Swiper className="swiper-thumbnails"
-                                        onSwiper={setThumbsSwiper}
-                                        spaceBetween={10}
-                                        slidesPerView={2}
-                                        watchSlidesProgress
-                                        modules={[Thumbs]}
-                                        style={{ marginTop: "10px" }}
-                                    >
-                                        <SwiperSlide>
-                                            <img
-                                                src={foundProduct.image}
-                                                alt="Thumb 1"
-                                            />
-                                        </SwiperSlide>
-                                        <SwiperSlide>
-                                            <img
-                                                src={foundProduct.hover_img}
-                                                alt="Thumb 2"
-                                            />
-                                        </SwiperSlide>
-                                    </Swiper> */}
                                 </div>
                             </div>
                             <div className="col-md-12 col-lg-4 view-section">
