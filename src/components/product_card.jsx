@@ -3,11 +3,19 @@
 import { useState } from 'react'
 import { Link } from 'react-router'
 import { Rating } from 'react-simple-star-rating'
-
+import { countContext } from '../App'
+import { useContext } from 'react'
 
 
 
 export function ProductCard(props) {
+
+    const {count, setCount} = useContext(countContext)
+
+    const addToCart = () =>{
+        setCount(count + 1)
+    }
+
     const [showquickview, setShowQuickView] = useState(false)
     const handleQuickView = () => {
         setShowQuickView(!showquickview)
@@ -27,7 +35,7 @@ export function ProductCard(props) {
                     <ul className="product-actions">
                         <li><button><i className="icon-favourite"></i></button></li>
                         <li><button onClick={handleQuickView}><i className="icon-quick-view"></i></button></li>
-                        <li><button><i className="icon-quick-shop"></i></button></li>
+                        <li><button onClick={addToCart}><i className="icon-quick-shop"></i></button></li>
                     </ul>
                 </figure>
                 <div className="color-swatches py-2">

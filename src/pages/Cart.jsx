@@ -35,69 +35,80 @@ function Cart() {
                             </div>
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <div className="cart-product">
-                                <div className="row">
-                                    <div className="col-9 col-md-5">
-                                        <div className="cart-product-info cart-item">
-                                            <figure>
-                                                <img src={img} alt="" />
-                                            </figure>
-                                            <div className="cart-product-info">
-                                                <b>Lace-sleeved traditional suit</b>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-3 col-md-2">
-                                        <div className="product-quantity cart-item">
-                                            <small>$ 400.00</small>
-                                        </div>
-                                    </div>
-                                    <div className="col-6 col-md-3">
-                                        <div className="product-quantity cart-item">
-                                            <small>$ 400.00</small>
-                                        </div>
-                                    </div>
-                                    <div className="col-6 col-md-2">
-                                        <div className="product-quantity cart-item">
-                                            <small>$ 400.00</small>
-                                        </div>
+                    <div className="cart-product">
+                        <div className="row">
+                            <div className="col-12 col-md-5">
+                                <div className="cart-product-info">
+                                    <figure>
+                                        <img src={img} alt="" />
+                                    </figure>
+                                    <div className="cart-product-info">
+                                        <b>Lace-sleeved traditional suit</b>
                                     </div>
                                 </div>
                             </div>
-                            <div className="cart-product">
-                                <div className="row">
-                                    <div className="col-9 col-md-5">
-                                        <div className="cart-product-info cart-item">
-                                            <figure>
-                                                <img src={img} alt="" />
-                                            </figure>
-                                            <div className="cart-product-info">
-                                                <b>Lace-sleeved traditional suit</b>
-                                            </div>
-                                        </div>
+                            <div className="col-12 col-md-2">
+                                <div className="product-price cart-item">
+                                    <b className="cart-md-heading">PRICE</b><small>$ 400.00</small>
+                                </div>
+                            </div>
+                            <div className="col-12 col-md-3">
+                                <div className="product-quantity cart-item">
+                                    <b className="cart-md-heading">QUANTITY</b>
+                                    <div className="qty-input">
+                                        <button className="qty-count qty-count--minus" data-action="minus" type="button">-</button>
+                                        <input className="product-qty" type="number" name="product-qty" defaultValue={1} />
+                                        <button className="qty-count qty-count--add" data-action="add" type="button">+</button>
                                     </div>
-                                    <div className="col-3 col-md-2">
-                                        <div className="product-quantity cart-item">
-                                            <small>$ 400.00</small>
-                                        </div>
-                                    </div>
-                                    <div className="col-6 col-md-3">
-                                        <div className="product-quantity cart-item">
-                                            <small>$ 400.00</small>
-                                        </div>
-                                    </div>
-                                    <div className="col-6 col-md-2">
-                                        <div className="product-quantity cart-item">
-                                            <small>$ 400.00</small>
-                                        </div>
-                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-12 col-md-2">
+                                <div className="product-total cart-item">
+                                    <b className="cart-md-heading">TOTAL</b><small>$ 800.00</small>
                                 </div>
                             </div>
                         </div>
+                        <div className="remove-product">
+                            <button><i className="icon-ham_close_btn"></i></button>
+                        </div>
                     </div>
-
+                    <div className="cart-product">
+                        <div className="row">
+                            <div className="col-12 col-md-5">
+                                <div className="cart-product-info">
+                                    <figure>
+                                        <img src={img} alt="" />
+                                    </figure>
+                                    <div className="cart-product-info">
+                                        <b>Lace-sleeved traditional suit</b>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-12 col-md-2">
+                                <div className="product-price cart-item">
+                                    <b className="cart-md-heading">PRICE</b><small>$ 400.00</small>
+                                </div>
+                            </div>
+                            <div className="col-12 col-md-3">
+                                <div className="product-quantity cart-item">
+                                    <b className="cart-md-heading">QUANTITY</b>
+                                    <div className="qty-input">
+                                        <button className="qty-count qty-count--minus" data-action="minus" type="button">-</button>
+                                        <input className="product-qty" type="number" name="product-qty" defaultValue={1} />
+                                        <button className="qty-count qty-count--add" data-action="add" type="button">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-12 col-md-2">
+                                <div className="product-total cart-item">
+                                    <b className="cart-md-heading">TOTAL</b><small>$ 800.00</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="remove-product">
+                            <button><i className="icon-ham_close_btn"></i></button>
+                        </div>
+                    </div>
                 </div>
             </section>
         </>

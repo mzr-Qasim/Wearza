@@ -744,7 +744,28 @@ section.seasonal-section {
     padding: 1rem;
     border: 1px solid $black-color;
     margin-bottom: 1rem;
+    position: relative;
+    .remove-product{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: .5rem;
+        margin-top: .5rem;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: .2rem;
+        i{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+                    color: $white-color;
+        }
+    }
 }
+
 
 .cart-item {
     display: flex;
@@ -757,6 +778,7 @@ section.seasonal-section {
     display: flex;
     align-items: center;
     gap: 1rem;
+    padding: 1rem 0;
 
 
     figure {
@@ -772,6 +794,119 @@ section.seasonal-section {
     }
 }
 
+.cart-product-info{
+    text-transform: uppercase;
+}
+
+.product-price, .product-total{
+    small{
+            font-weight: 500;
+    }
+}
+
+.cart-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5rem;
+    .cart-md-heading{
+        display: none;
+    }
+}
+
+.product-quantity{
+    .qty-input {
+	color: $black-color;
+	background: $white-color;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+
+	.product-qty,
+	.qty-count {
+		background: transparent;
+		color: inherit;
+		font-weight: bold;
+		font-size: inherit;
+		border: none;
+		display: inline-block;
+		min-width: 0;
+		height: 2.5rem;
+		line-height: 1;
+		
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.product-qty {
+		width: 50px;
+		min-width: 0;
+		display: inline-block;
+		text-align: center;
+		appearance: textfield;		
+		
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			appearance: none;
+			margin: 0;
+		}
+	}
+
+	.qty-count {
+		padding: 0;
+		cursor: pointer;
+		width: 2.5rem;
+		font-size: 1.25em;
+		text-indent: -100px;
+		overflow: hidden;
+		position: relative;
+		
+		&:before, 
+		&:after {
+			content: "";
+			height: 2px;
+			width: 10px;
+			position: absolute;
+			display: block;
+			background: $white-color;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+		&--minus {
+			border-right: 1px solid $white-color;
+		}
+		&--add {
+			border-left: 1px solid $white-color;
+			&:after {
+				transform: rotate(90deg);
+			}
+		}
+		
+		// &:disabled {
+		// 	color: red;
+		// 	background: yellow;
+		// 	cursor: not-allowed;
+		// 	border-color: transparent;
+			
+		// 	&:before,
+		// 	&:after {
+		// 		background: red;
+		// 	}
+		// }
+	}
+}
+
+.qty-input {
+    background-color: $black-color;
+    color: $white-color;
+}
+
+}
 
 
 
