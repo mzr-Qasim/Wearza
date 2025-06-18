@@ -5,8 +5,7 @@ import main_logo from "/images/main_logo.svg"
 
 
 
-
-export function Navbar() {
+function Navbar() {
     const [showSearchbar, setShowSearchBar] = useState(false)
     const handleSearchBar = () => {
         setShowSearchBar(!showSearchbar)
@@ -36,10 +35,10 @@ export function Navbar() {
                     <a href="" className="main_logo"><img src={main_logo} alt="" /></a>
                     <div className="nav-right sm-hide">
                         <ul>
-                            <li><button onClick={handleSearchBar} className="nav-right-items"><i className="icon-search"></i><span>Search</span></button></li>
-                            <li><a href="" className="nav-right-items"><i className="icon-user"></i><span>account</span></a></li>
-                            <li><a href="" className="nav-right-items selected-items"><i className="icon-favourite"></i><span>wishlist</span></a></li>
-                            <li><a href="" className="nav-right-items selected-items"><i className="icon-cart"></i><span>cart</span></a></li>
+                            <li><button onClick={handleSearchBar} className="nav-right-items"><i className="icon-search"></i><span className="right-items-title">Search</span></button></li>
+                            <li><a href="" className="nav-right-items"><i className="icon-user"></i><span className="right-items-title">account</span></a></li>
+                            <li><a href="" className="nav-right-items selected-items"><i className="icon-favourite"></i><span className="right-items-title">wishlist</span></a></li>
+                            <li><Link className="nav-right-items selected-items" to={"cart"}><i className="icon-cart"></i><span className="right-items-title">cart</span><span className="count">0</span></Link></li>
                         </ul>
 
                     </div>
@@ -60,3 +59,5 @@ export function Navbar() {
         </nav>
     )
 }
+
+export default Navbar

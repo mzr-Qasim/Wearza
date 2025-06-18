@@ -15,21 +15,21 @@ export function ProductCard(props) {
     return (
         <div className="col-sm-6 col-md-4 col-lg-4 col-xl-3">
             <div className="product-card">
-                <Link to={`/products/${props.product.id}`}>
-                    <figure >
+                <figure >
+                    <Link to={`/products/${props.product.id}`}>
                         <img className="main_img" src={props.product.image} loading="lazy" alt="" />
                         <img className="hover_img" src={props.product.hover_img} loading="lazy" alt="" />
-                        <div className="product-rating">
-                            <Rating emptyColor={"white"} fillColor={"#F5C518"} size={19} readonly={true} allowFraction={true} initialValue={props.product.rating.rate} />
-                        </div>
+                    </Link>
+                    <div className="product-rating">
+                        <Rating emptyColor={"white"} fillColor={"#F5C518"} size={19} readonly={true} allowFraction={true} initialValue={props.product.rating.rate} />
+                    </div>
 
-                        <ul className="product-actions">
-                            <li><button><i className="icon-favourite"></i></button></li>
-                            <li><button><i className="icon-quick-shop"></i></button></li>
-                            <li><button onClick={handleQuickView}><i className="icon-quick-view"></i></button></li>
-                        </ul>
-                    </figure>
-                </Link>
+                    <ul className="product-actions">
+                        <li><button><i className="icon-favourite"></i></button></li>
+                        <li><button onClick={handleQuickView}><i className="icon-quick-view"></i></button></li>
+                        <li><button><i className="icon-quick-shop"></i></button></li>
+                    </ul>
+                </figure>
                 <div className="color-swatches py-2">
                     <ul>
 
@@ -51,7 +51,7 @@ export function ProductCard(props) {
 
                 </div>
                 <div className="product-details">
-                    <Link className="product-title" to={"/product"}>{props.product.title}</Link>
+                    <Link className="product-title" to={`/products/${props.product.id}`}>{props.product.title}</Link>
                     <small className="product-price pt-1">${props.product.price}</small>
                 </div>
                 <div className={`quick-view ${showquickview ? "show-quick-view" : ""}`}>

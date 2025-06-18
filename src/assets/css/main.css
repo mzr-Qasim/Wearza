@@ -12364,9 +12364,24 @@ nav.Navbar .main_logo {
   align-items: center;
   gap: 0.2rem;
   font-size: 0.8rem;
+  position: relative;
 }
-.nav-right ul li span {
+.nav-right ul li span.right-items-title {
   display: none;
+}
+.nav-right ul li span.count {
+  position: absolute;
+  top: -5px;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  background-color: #000000;
+  color: #ffffff;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav_hambtn {
@@ -12572,8 +12587,8 @@ section.product-cards .shop-all-btn {
 
 .quick-view {
   background-color: #ffffff;
-  min-height: 60vh;
-  width: 70%;
+  min-height: 80vh;
+  width: 80%;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -12581,6 +12596,7 @@ section.product-cards .shop-all-btn {
   z-index: 200;
   opacity: 0;
   pointer-events: none;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 .show-quick-view {
@@ -12667,9 +12683,13 @@ section.seasonal-section .seasonal-section-inner .seasonal-caption h2, section.s
 }
 .title-bar .title-bar-inner .title-bar-link {
   color: #000000;
+  text-transform: uppercase;
+  font-weight: 300;
 }
 .title-bar .title-bar-inner span {
   position: relative;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 .title-bar .title-bar-inner span::after {
   content: "";
@@ -12717,10 +12737,6 @@ section.seasonal-section .seasonal-section-inner .seasonal-caption h2, section.s
   display: none;
 }
 
-.product-detail-inner {
-  padding-bottom: 5rem;
-}
-
 .view-section {
   min-height: 100%;
   padding-bottom: 2rem;
@@ -12746,6 +12762,45 @@ section.seasonal-section .seasonal-section-inner .seasonal-caption h2, section.s
 .product-summary {
   color: #000000;
   height: 100%;
+}
+
+.products-header {
+  padding: 1rem;
+  background-color: #000000;
+  color: #ffffff;
+}
+.products-header .product-header-inner small, .products-header .product-header-inner .small {
+  font-weight: bolder;
+}
+
+.cart-product {
+  padding: 1rem;
+  border: 1px solid #000000;
+  margin-bottom: 1rem;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.cart-product-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.cart-product-info figure {
+  width: 150px;
+  height: 150px;
+}
+.cart-product-info figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 
 @media (max-width: 1150px) {
@@ -12839,6 +12894,9 @@ section.seasonal-section .seasonal-section-inner .seasonal-caption h2, section.s
   section.style-showcase .showcasecard figure {
     aspect-ratio: 2/2.2;
   }
+  .products-header {
+    display: none;
+  }
 }
 @media (max-width: 575px) {
   .nav-right {
@@ -12853,8 +12911,8 @@ section.seasonal-section .seasonal-section-inner .seasonal-caption h2, section.s
   .nav-right ul {
     justify-content: space-between;
   }
-  .nav-right ul span {
-    display: block !important;
+  .nav-right ul span.right-items-title {
+    display: flex;
   }
   section.seasonal-section .seasonal-section-inner .seasonal-caption {
     align-items: flex-start;

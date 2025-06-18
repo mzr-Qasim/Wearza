@@ -3,6 +3,7 @@
 
 
 import main_hero_img from "/images/main_hero.jpg"
+import { Link } from "react-router"
 
 export function MainHeroSection() {
     return (
@@ -14,7 +15,7 @@ export function MainHeroSection() {
                         <div className="caption-inner">
                             <h2>New Arrivals</h2>
                             <p >Delicate fabrics and a neutral colour palette are the details that give these pieces an edge.</p>
-                            <a href="" className="theme-btn primary_btn">shop now</a>
+                            <Link to={"/shop"} className="theme-btn primary_btn">shop now</Link>
                         </div>
 
 

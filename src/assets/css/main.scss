@@ -163,10 +163,27 @@ nav.Navbar {
                 align-items: center;
                 gap: .2rem;
                 font-size: .8rem;
+                position: relative;
             }
 
-            span {
+            span.right-items-title {
                 display: none;
+            }
+
+            span.count {
+                position: absolute;
+                top: -5px;
+                left: 100%;
+                transform: translate(-50%, -50%);
+                background-color: $black-color;
+                color: $white-color;
+                width: 1.2rem;
+                height: 1.2rem;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
             }
 
             // .selected-items{
@@ -466,8 +483,8 @@ section.product-cards {
 
 .quick-view {
     background-color: $white-color;
-    min-height: 60vh;
-    width: 70%;
+    min-height: 80vh;
+    width: 80%;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -475,6 +492,7 @@ section.product-cards {
     z-index: 200;
     opacity: 0;
     pointer-events: none;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 
 }
 
@@ -579,10 +597,14 @@ section.seasonal-section {
 
         .title-bar-link {
             color: $black-color;
+            text-transform: uppercase;
+            font-weight: 300;
         }
 
         span {
             position: relative;
+            font-weight: 500;
+            text-transform: uppercase;
 
             &::after {
                 content: '';
@@ -647,9 +669,9 @@ section.seasonal-section {
 
 // Product Detail Page
 
-.product-detail-inner {
-    padding-bottom: $section-space-md;
-}
+// .product-detail-inner {
+//     padding-bottom: $section-space-md;
+// }
 
 .view-section {
     min-height: 100%;
@@ -657,6 +679,7 @@ section.seasonal-section {
 }
 
 .product-gallery {
+
     // .product-card{
     //     figure{
     //         width: 100%;
@@ -671,6 +694,8 @@ section.seasonal-section {
     .gallery-swiper {
         .swiper-button-prev {
             color: $black-color;
+
+
         }
 
         .swiper-button-next {
@@ -678,6 +703,7 @@ section.seasonal-section {
         }
 
         .swiper-slide {
+
             figure {
                 width: 100%;
                 aspect-ratio: 1/1.4;
@@ -698,6 +724,56 @@ section.seasonal-section {
     height: 100%;
 
 }
+
+
+// Cart Page
+
+.products-header{
+    padding: 1rem;
+    background-color: $black-color;
+    color: $white-color;
+    .product-header-inner{
+        small{
+            font-weight: bolder;
+        }
+    }
+}
+
+
+.cart-product {
+    padding: 1rem;
+    border: 1px solid $black-color;
+    margin-bottom: 1rem;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+
+.cart-product-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+
+    figure {
+        width: 150px;
+        height: 150px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+}
+
+
+
 
 
 

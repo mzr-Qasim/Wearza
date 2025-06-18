@@ -137,11 +137,13 @@
             }
         }
     }
+    .products-header{
+        display: none;
+    }
 
 
 
 }
-
 
 @media (max-width:575px) {
     .nav-right {
@@ -156,8 +158,8 @@
         ul {
             justify-content: space-between;
 
-            span {
-                display: block !important;
+            span.right-items-title{
+                display: flex;
             }
         }
     }
