@@ -151,11 +151,12 @@
             height: 120px;
         }
     }
+
     .cart-item {
-            .cart-md-heading {
-                display: flex !important;
-            }
+        .cart-md-heading {
+            display: flex !important;
         }
+    }
 
 
 
@@ -190,6 +191,11 @@
             }
         }
     }
+
+    .footer {
+        margin-bottom: 5rem;
+    }
+
 
 
 }

@@ -912,4 +912,14 @@ section.seasonal-section {
 
 
 
+
+// Footer
+.footer{
+    background-color: $white-color;
+
+    .footer-wrapper{
+        padding: 2rem 0;
+    }
+}
+
 @import "./partials/mediaqueries"

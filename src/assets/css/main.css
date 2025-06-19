@@ -12915,6 +12915,13 @@ section.seasonal-section .seasonal-section-inner .seasonal-caption h2, section.s
   color: #ffffff;
 }
 
+.footer {
+  background-color: #ffffff;
+}
+.footer .footer-wrapper {
+  padding: 2rem 0;
+}
+
 @media (max-width: 1150px) {
   .nav-left {
     position: fixed;
@@ -13036,5 +13043,8 @@ section.seasonal-section .seasonal-section-inner .seasonal-caption h2, section.s
   section.seasonal-section .seasonal-section-inner .seasonal-caption {
     align-items: flex-start;
     padding: 0 1rem;
+  }
+  .footer {
+    margin-bottom: 5rem;
   }
 }/*# sourceMappingURL=main.css.map */
