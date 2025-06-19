@@ -13021,25 +13021,17 @@ section.seasonal-section .seasonal-section-inner .seasonal-caption h2, section.s
 
 @media (max-width: 1150px) {
   .nav-left {
-    position: fixed;
+    display: none;
+  }
+  .nav-left-md {
     display: flex;
     justify-content: center;
-    align-items: center;
-    top: 0;
-    left: 0;
-    width: 300px;
-    height: 100vh;
-    background-color: #ffffff;
-    z-index: 100;
-    transform: translateX(-100%);
-    transition: all ease-in-out 0.5s;
-    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
   }
-  .nav-left ul {
+  .nav-left-md ul {
     display: flex;
     flex-direction: column;
   }
-  .nav-left ul li:not(:last-child) {
+  .nav-left-md ul li:not(:last-child) {
     margin-bottom: 1rem;
   }
   .nav_hambtn {
