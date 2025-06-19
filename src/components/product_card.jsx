@@ -31,7 +31,7 @@ export function ProductCard(props) {
                     <div className="product-rating">
                         <Rating emptyColor={"white"} fillColor={"#F5C518"} size={19} readonly={true} allowFraction={true} initialValue={props.product.rating.rate} />
                     </div>
-
+{/* #F5C518 */}
                     <ul className="product-actions">
                         <li><button><i className="icon-favourite"></i></button></li>
                         <li><button onClick={handleQuickView}><i className="icon-quick-view"></i></button></li>

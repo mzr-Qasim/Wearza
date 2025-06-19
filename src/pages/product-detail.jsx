@@ -19,8 +19,8 @@ function ProductDetail() {
     const foundProduct = products.find(item => item.id == id);
 
     const [productinfotabs, setProductInfoTabs] = useState(false)
-    const handleProductInfoTabs = ()=>{
-        setProductInfoTabs(!productinfotabs) 
+    const handleProductInfoTabs = () => {
+        setProductInfoTabs(!productinfotabs)
     }
     return (
         <>
@@ -72,7 +72,7 @@ function ProductDetail() {
                                                 <img
                                                     src={foundProduct.hover_img}
                                                     alt="Product 1"
-                                                    
+
                                                 />
                                             </figure>
                                         </SwiperSlide>
@@ -81,8 +81,9 @@ function ProductDetail() {
                             </div>
                             <div className="col-md-12 col-lg-5 view-section">
                                 <div className="product-summary">
-                                    <h3 className="pb-4">{foundProduct.title}</h3>
-                                    <h4 className="pb-4">$ {foundProduct.price}</h4>
+                                    <h4>{foundProduct.title}</h4>
+                                    <small>Availability : <span>In Stock</span></small>
+                                    <h4>$ {foundProduct.price}</h4>
                                 </div>
                             </div>
                         </div>
@@ -90,19 +91,29 @@ function ProductDetail() {
                     <div className="productinfo">
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <button onClick={handleProductInfoTabs} className={`nav-link active${handleProductInfoTabs ? "active" : ""}`} id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">PRODUCT DETAILS</button>
+                                <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">PRODUCT DETAILS</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button onClick={handleProductInfoTabs} className={`nav-link ${handleProductInfoTabs ? "active" : ""}`} id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">REVIEWS</button>
+                                <button className="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">REVIEWS</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button onClick={handleProductInfoTabs} className={`nav-link active ${handleProductInfoTabs ? "active" : ""}`} id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">SHIPPING & RETURNS</button>
+                                <button className="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">SHIPPING & RETURNS</button>
                             </li>
                         </ul>
-                        <div class="tab-content" id="myTabContent">
-                            <div className={`tab-pane fade show ${handleProductInfoTabs ? "active" : ""}`} id="home" role="tabpanel" aria-labelledby="home-tab"><p>{foundProduct.description}</p></div>
-                            <div className={`tab-pane fade show ${handleProductInfoTabs ? "active" : ""}`} id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-                            <div className={`tab-pane fade show ${handleProductInfoTabs ? "active" : ""}`} id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+                        <div className="tab-content py-3" id="myTabContent">
+                            <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><p>{foundProduct.description}</p></div>
+                            <div className="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                            <div className="tab-pane fade show" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                <div className="returns-policy pb-3">
+                                    <b>Returns Policy</b>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eros justo, accumsan non dui sit amet. Phasellus semper volutpat mi sed imperdiet. Ut odio lectus, vulputate non ex non, mattis sollicitudin purus. Mauris consequat justo a enim interdum, in consequat dolor accumsan. Nulla iaculis diam purus, ut vehicula leo efficitur at.</p>
+                                </div>
+                                <div className="shipping">
+                                    <b>Shipping</b>
+                                    <p>Pellentesque ultrices ut sem sit amet lacinia. Sed nisi dui, ultrices ut turpis pulvinar. Sed fringilla ex eget lorem consectetur, consectetur blandit lacus varius. Duis vel scelerisque elit, et vestibulum metus. Integer sit amet tincidunt tortor. Ut lacinia ullamcorper massa, a fermentum arcu vehicula ut. Ut efficitur faucibus dui Nullam tristique dolor eget turpis consequat varius. Quisque a interdum augue. Nam ut nibh mauris.</p>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
