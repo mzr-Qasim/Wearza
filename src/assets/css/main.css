@@ -12764,6 +12764,10 @@ section.seasonal-section .seasonal-section-inner .seasonal-caption h2, section.s
   height: 100%;
 }
 
+.Page-main-heading h3, .Page-main-heading .h3 {
+  font-weight: 500;
+}
+
 .products-header {
   padding: 1rem;
   background-color: #000000;

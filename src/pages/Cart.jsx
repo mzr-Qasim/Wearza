@@ -17,6 +17,9 @@ function Cart() {
             </div>
             <section className="cart-products">
                 <div className="container custom-container-lg">
+                    <div className="Page-main-heading d-flex justify-content-center pb-4">
+                        <h3>YOUR CART</h3>
+                    </div>
                     <div className="products-header mb-3">
                         <div className="product-header-inner">
                             <div className="row">
