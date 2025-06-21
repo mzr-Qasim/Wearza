@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { products } from "../productCardData"
-
+import Zoom from 'react-medium-image-zoom';
 
 
 
@@ -60,21 +60,36 @@ function ProductDetail() {
                                         }}
                                     >
                                         <SwiperSlide>
-                                            <figure>
-                                                <img
-                                                    src={foundProduct.image}
-                                                    alt="Product 1"
-                                                />
-                                            </figure>
+                                            <Zoom>
+                                                <figure>
+                                                    <img
+                                                        src={foundProduct.image}         
+                                                        alt="Product 1"
+                                                        style={{
+                                                            width: '100%',
+                                                            objectFit: 'cover',
+                                                            cursor: 'pointer',
+
+                                                        }}
+                                                    />
+                                                </figure>
+                                            </Zoom>
                                         </SwiperSlide>
                                         <SwiperSlide>
-                                            <figure>
-                                                <img
-                                                    src={foundProduct.hover_img}
-                                                    alt="Product 1"
+                                             <Zoom>
+                                                <figure>
+                                                    <img
+                                                        src={foundProduct.hover_img}         
+                                                        alt="Product 2"
+                                                        style={{
+                                                            width: '100%',
+                                                            objectFit: 'cover',
+                                                            cursor: 'pointer',
 
-                                                />
-                                            </figure>
+                                                        }}
+                                                    />
+                                                </figure>
+                                            </Zoom>
                                         </SwiperSlide>
                                     </Swiper>
                                 </div>

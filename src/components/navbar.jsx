@@ -31,7 +31,7 @@ function Navbar() {
                             <li><Link to={"/"}>home</Link></li>
                             <li><Link to={"shop"}>shop</Link></li>
                             <li><a href="">features</a></li>
-                            <li><a href="">lookbook</a></li>
+                            <li><Link to={"lookbook"}>lookbook</Link></li>
                             <li><Link to={"about-us"}>about us</Link></li>
                             <li><a href="">blog</a></li>
                         </ul>
@@ -62,7 +62,7 @@ function Navbar() {
                                         <li><Link to={"/"}>home</Link></li>
                                         <li><Link to={"shop"}>shop</Link></li>
                                         <li><a href="">features</a></li>
-                                        <li><a href="">lookbook</a></li>
+                                        <li><Link to={"lookbook"}>lookbook</Link></li>
                                         <li><Link to={"about-us"}>about us</Link></li>
                                         <li><a href="">blog</a></li>
                                     </ul>
