@@ -105,6 +105,7 @@ nav.Navbar {
     .main_logo {
         width: clamp(7rem, 9vw, 16rem);
     }
+
 }
 
 .nav-inner {
@@ -694,19 +695,6 @@ section.seasonal-section {
     padding-bottom: 2rem;
 }
 
-.product-gallery {
-
-    // .product-card{
-    //     figure{
-    //         width: 100%;
-    //         aspect-ratio: 1/1.5;
-    //         img{
-    //             width: 100%;
-    //             height: 100%;
-    //             object-fit: cover;
-    //         }
-    //     }
-    // }
     .gallery-swiper {
         .swiper-button-prev {
             color: $black-color;
@@ -723,17 +711,51 @@ section.seasonal-section {
             figure {
                 width: 100%;
                 aspect-ratio: 1/1.4;
+                position: relative;
+                overflow: hidden;
 
                 img {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
                 }
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $white-color;
+                    opacity: .5;
+                    z-index: 2;
+                    pointer-events: none;
+                    transform: translateX(-100%);
+                }
+                i.icon-zoom-in{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 3;
+                    font-size: 2.5rem;
+                    color: $black-color;
+                    pointer-events: none;
+                    opacity: 0;
+                }
+                &:hover{
+                    &::after{
+                        transform: translateX(0);
+                    }
+                    i.icon-zoom-in{
+                        opacity: 1;
+                    }
+                }
             }
         }
     }
 
-}
+
 
 .product-summary {
     color: $black-color;
@@ -980,6 +1002,7 @@ section.seasonal-section {
 section.lookbook-wrapper {
     .lookbook-image {
         margin-bottom: 1.5rem;
+
         figure {
             width: 100%;
             aspect-ratio: 1/1.5;

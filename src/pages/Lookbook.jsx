@@ -18,6 +18,9 @@ function LookBook() {
             </div>
             <section className="lookbook-wrapper">
                 <div className="container-fluid">
+                    <div className="Page-main-heading d-flex justify-content-center pb-4">
+                        <h3>Lookbook</h3>
+                    </div>
                     <div className="row">
                         {
                             products.map(product => <LookBookProduct product={product} />)

@@ -4,7 +4,7 @@ import Zoom from 'react-medium-image-zoom';
 function LookBookProduct(props) {
     return (
         <>
-            <div className="col-sm-6 col-md-6 col-lg-4">
+            <div className="col-sm-12 col-md-6 col-lg-4">
                 <div className="lookbook-image">
                     <Zoom>
                         <figure>
@@ -22,7 +22,7 @@ function LookBookProduct(props) {
                     </Zoom>
                 </div>
             </div >
-            <div className="col-sm-6 col-md-6 col-lg-4">
+            <div className="col-sm-12 col-md-6 col-lg-4">
                 <div className="lookbook-image">
 
                     <Zoom>

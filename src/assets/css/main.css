@@ -12005,8 +12005,8 @@ textarea.form-control-lg {
 }
 @font-face {
   font-family: "icomoon";
-  src: url("fonts/icomoon.eot?t6kmak");
-  src: url("fonts/icomoon.eot?t6kmak#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?t6kmak") format("truetype"), url("fonts/icomoon.woff?t6kmak") format("woff"), url("fonts/icomoon.svg?t6kmak#icomoon") format("svg");
+  src: url("fonts/icomoon.eot?i1pe5f");
+  src: url("fonts/icomoon.eot?i1pe5f#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?i1pe5f") format("truetype"), url("fonts/icomoon.woff?i1pe5f") format("woff"), url("fonts/icomoon.svg?i1pe5f#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -12055,6 +12055,10 @@ textarea.form-control-lg {
 
 .icon-user:before {
   content: "\e907";
+}
+
+.icon-zoom-in:before {
+  content: "\e908";
 }
 
 body {
@@ -12742,21 +12746,53 @@ section.seasonal-section .seasonal-section-inner .seasonal-caption h2, section.s
   padding-bottom: 2rem;
 }
 
-.product-gallery .gallery-swiper .swiper-button-prev {
+.gallery-swiper .swiper-button-prev {
   color: #000000;
 }
-.product-gallery .gallery-swiper .swiper-button-next {
+.gallery-swiper .swiper-button-next {
   color: #000000;
 }
-.product-gallery .gallery-swiper .swiper-slide figure {
+.gallery-swiper .swiper-slide figure {
   width: 100%;
   aspect-ratio: 1/1.4;
+  position: relative;
+  overflow: hidden;
 }
-.product-gallery .gallery-swiper .swiper-slide figure img {
+.gallery-swiper .swiper-slide figure img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.gallery-swiper .swiper-slide figure::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  opacity: 0.5;
+  z-index: 2;
+  pointer-events: none;
+  transform: translateX(-100%);
+}
+.gallery-swiper .swiper-slide figure i.icon-zoom-in {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  font-size: 2.5rem;
+  color: #000000;
+  pointer-events: none;
+  opacity: 0;
+}
+.gallery-swiper .swiper-slide figure:hover::after {
+  transform: translateX(0);
+}
+.gallery-swiper .swiper-slide figure:hover i.icon-zoom-in {
+  opacity: 1;
 }
 
 .product-summary {
@@ -13038,15 +13074,17 @@ section.lookbook-wrapper .lookbook-image figure img {
   .nav-left {
     display: none;
   }
-  .nav-left-md {
-    display: flex;
-    justify-content: center;
+  .navbar-offcanvas {
+    display: flex !important;
   }
-  .nav-left-md ul {
+  .navbar-offcanvas .nav-left-md {
+    display: flex;
+  }
+  .navbar-offcanvas .nav-left-md ul {
     display: flex;
     flex-direction: column;
   }
-  .nav-left-md ul li:not(:last-child) {
+  .navbar-offcanvas .nav-left-md ul li:not(:last-child) {
     margin-bottom: 1rem;
   }
   .nav_hambtn {
@@ -13059,6 +13097,9 @@ section.lookbook-wrapper .lookbook-image figure img {
 @media (max-width: 991px) {
   section.style-showcase .showcasecard figure {
     aspect-ratio: 2/3;
+  }
+  section.seasonal-section .seasonal-section-inner {
+    background-attachment: scroll;
   }
   .shop-page-inner .filters {
     position: fixed;
@@ -13111,6 +13152,12 @@ section.lookbook-wrapper .lookbook-image figure img {
   .main_hero_caption .caption-inner p {
     padding-bottom: 1rem;
   }
+  section.product-cards .product-card figure:hover .main_img {
+    opacity: 1;
+  }
+  section.product-cards .product-card figure:hover .hover_img {
+    display: none;
+  }
   section.product-cards .product-card figure .product-actions {
     opacity: 1;
   }
@@ -13135,20 +13182,27 @@ section.lookbook-wrapper .lookbook-image figure img {
     left: 0;
     width: 100%;
     background-color: #ffffff;
-    padding: 1rem;
+    padding: 1.5rem;
     z-index: 100;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   }
   .nav-right ul {
     justify-content: space-between;
   }
-  .nav-right ul span.right-items-title {
+  .nav-right ul li span.right-items-title {
     display: flex;
   }
   section.seasonal-section .seasonal-section-inner .seasonal-caption {
     align-items: flex-start;
     padding: 0 1rem;
   }
+  .gallery-swiper .swiper-slide figure::after {
+    display: none;
+  }
+  .gallery-swiper .swiper-slide figure i.icon-zoom-in {
+    display: none;
+  }
   .footer {
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
   }
 }/*# sourceMappingURL=main.css.map */

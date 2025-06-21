@@ -63,7 +63,7 @@ function ProductDetail() {
                                             <Zoom>
                                                 <figure>
                                                     <img
-                                                        src={foundProduct.image}         
+                                                        src={foundProduct.image}
                                                         alt="Product 1"
                                                         style={{
                                                             width: '100%',
@@ -72,14 +72,15 @@ function ProductDetail() {
 
                                                         }}
                                                     />
+                                                        <i className="icon-zoom-in"></i>
                                                 </figure>
                                             </Zoom>
                                         </SwiperSlide>
                                         <SwiperSlide>
-                                             <Zoom>
+                                            <Zoom>
                                                 <figure>
                                                     <img
-                                                        src={foundProduct.hover_img}         
+                                                        src={foundProduct.hover_img}
                                                         alt="Product 2"
                                                         style={{
                                                             width: '100%',
@@ -88,6 +89,7 @@ function ProductDetail() {
 
                                                         }}
                                                     />
+                                                    <i className="icon-zoom-in"></i>
                                                 </figure>
                                             </Zoom>
                                         </SwiperSlide>

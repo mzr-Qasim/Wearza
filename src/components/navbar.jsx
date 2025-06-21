@@ -30,14 +30,13 @@ function Navbar() {
                         <ul>
                             <li><Link to={"/"}>home</Link></li>
                             <li><Link to={"shop"}>shop</Link></li>
-                            <li><a href="">features</a></li>
+                            <li><Link to={"/"}>features</Link></li>
                             <li><Link to={"lookbook"}>lookbook</Link></li>
                             <li><Link to={"about-us"}>about us</Link></li>
-                            <li><a href="">blog</a></li>
+                            <li><Link to={"/"}>blog</Link></li>
                         </ul>
                     </div>
-
-                    <a href="" className="main_logo"><img src={main_logo} alt="" /></a>
+                    <Link to={"/"}><img className="main_logo" src={main_logo} alt="" /></Link>
                     <div className="nav-right sm-hide">
                         <ul>
                             <li><button onClick={handleSearchBar} className="nav-right-items"><i className="icon-search"></i><span className="right-items-title">Search</span></button></li>
@@ -49,12 +48,12 @@ function Navbar() {
                     </div>
 
                     {/* <button className="nav_hambtn" onClick={handleNavToggle}><i className={showMenu ? "icon-ham_close_btn" : "icon-hamburger"}></i></button> */}
-                    <div className="navbar-offcanvas">
+                    <div className="navbar-offcanvas d-none">
                         <button className="nav_hambtn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" ><i className={showMenu ? "icon-ham_close_btn" : "icon-hamburger"}></i></button>
 
                         <div className="offcanvas offcanvas-start" tabIndex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                             <div className="offcanvas-header">
-                                <button className="menu_close" data-bs-dismiss="offcanvas"  aria-label="Close"><i className="icon-ham_close_btn"></i></button>
+                                <button className="menu_close" data-bs-dismiss="offcanvas" aria-label="Close"><i className="icon-ham_close_btn"></i></button>
                             </div>
                             <div className="offcanvas-body">
                                 <div className="nav-left-md">

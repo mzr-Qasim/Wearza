@@ -3,21 +3,27 @@
         display: none;
     }
 
-    .nav-left-md {
-        display: flex;
-        justify-content: center;
+    .navbar-offcanvas {
+        display: flex !important;
 
-        ul {
+        .nav-left-md {
             display: flex;
-            flex-direction: column;
 
-            li {
-                &:not(:last-child) {
-                    margin-bottom: 1rem;
+            ul {
+                display: flex;
+                flex-direction: column;
+
+
+                li {
+                    &:not(:last-child) {
+                        margin-bottom: 1rem;
+                    }
                 }
             }
         }
     }
+
+
 
     .nav_hambtn {
         display: block;
@@ -42,6 +48,12 @@
             figure {
                 aspect-ratio: 2 / 3;
             }
+        }
+    }
+
+    section.seasonal-section {
+        .seasonal-section-inner {
+            background-attachment: scroll;
         }
     }
 
@@ -117,8 +129,17 @@
     section.product-cards {
         .product-card {
             figure {
-                .product-actions {
+                &:hover {
+                    .main_img {
+                        opacity: 1;
+                    }
 
+                    .hover_img {
+                        display: none;
+                    }
+                }
+
+                .product-actions {
                     opacity: 1;
                 }
             }
@@ -132,6 +153,7 @@
             }
         }
     }
+
 
     .products-header {
         display: none;
@@ -161,14 +183,18 @@
         left: 0;
         width: 100%;
         background-color: $white-color;
-        padding: 1rem;
+        padding: 1.5rem;
         z-index: 100;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 
         ul {
             justify-content: space-between;
 
-            span.right-items-title {
-                display: flex;
+            li {
+
+                span.right-items-title {
+                    display: flex;
+                }
             }
         }
     }
@@ -184,8 +210,22 @@
         }
     }
 
+    .gallery-swiper {
+        .swiper-slide {
+            figure {
+                &::after {
+                    display: none;
+                }
+
+                i.icon-zoom-in {
+                    display: none;
+                }
+            }
+        }
+    }
+
     .footer {
-        margin-bottom: 2rem;
+        margin-bottom: 5rem;
     }
 
 
