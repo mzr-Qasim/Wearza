@@ -119,6 +119,16 @@ button {
     }
 }
 
+.quaternary_btn{
+    color: $white-color;
+    background-color: $black-color;
+    border: 1px solid $white-color;
+        &:hover {
+        background-color: $white-color;
+        color: $black-color;
+    }
+}
+
 
 // Zoom in
 

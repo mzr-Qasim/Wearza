@@ -697,12 +697,37 @@ section.seasonal-section {
 .gallery-swiper {
     .swiper-button-prev {
         color: $black-color;
+        background-color: $white-color;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+
+
+        &::after {
+            font-size: 1.5rem;
+        }
 
 
     }
 
     .swiper-button-next {
         color: $black-color;
+        background-color: $white-color;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+
+        &::after {
+            font-size: 1.5rem;
+        }
     }
 
     .swiper-slide {

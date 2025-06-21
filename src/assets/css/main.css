@@ -12164,6 +12164,16 @@ button {
   color: #ffffff;
 }
 
+.quaternary_btn {
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px solid #ffffff;
+}
+.quaternary_btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
 i.zoom-in {
   position: absolute;
   top: 0.5rem;
@@ -12762,9 +12772,31 @@ section.seasonal-section .seasonal-section-inner .seasonal-caption h2, section.s
 
 .gallery-swiper .swiper-button-prev {
   color: #000000;
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.gallery-swiper .swiper-button-prev::after {
+  font-size: 1.5rem;
 }
 .gallery-swiper .swiper-button-next {
   color: #000000;
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.gallery-swiper .swiper-button-next::after {
+  font-size: 1.5rem;
 }
 .gallery-swiper .swiper-slide figure {
   width: 100%;
@@ -13187,6 +13219,12 @@ section.lookbook-wrapper .lookbook-image figure:hover i.zoom-in {
   section.seasonal-section .seasonal-section-inner .seasonal-caption {
     align-items: flex-start;
     padding: 0 1rem;
+  }
+  .gallery-swiper .swiper-button-prev {
+    display: flex;
+  }
+  .gallery-swiper .swiper-button-next {
+    display: flex;
   }
   .footer {
     margin-bottom: 5rem;

@@ -54,7 +54,7 @@ function Home() {
         <div className="seasonal-section-inner">
           <div className="seasonal-caption">
             <h2 className="pb-3">new for spring</h2>
-            <Link to={"/shop"} className="theme-btn primary_btn">shop now</Link>
+            <Link to={"/shop"} className="theme-btn quaternary_btn">shop now</Link>
           </div>
         </div>
       </section>
