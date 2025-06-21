@@ -37,6 +37,9 @@ export function ProductCard(props) {
                         <li><button onClick={handleQuickView}><i className="icon-quick-view"></i></button></li>
                         <li><button onClick={addToCart}><i className="icon-quick-shop"></i></button></li>
                     </ul>
+                    <div className="added-to-cart">
+                        <h4>ADDED TO CART</h4>
+                    </div>
                 </figure>
                 <div className="color-swatches py-2">
                     <ul>
