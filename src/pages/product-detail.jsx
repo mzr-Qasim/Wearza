@@ -72,7 +72,7 @@ function ProductDetail() {
 
                                                         }}
                                                     />
-                                                        <i className="icon-zoom-in"></i>
+                                                        <i className="zoom-in icon-zoom-in"></i>
                                                 </figure>
                                             </Zoom>
                                         </SwiperSlide>
@@ -89,7 +89,7 @@ function ProductDetail() {
 
                                                         }}
                                                     />
-                                                    <i className="icon-zoom-in"></i>
+                                                    <i className="zoom-in icon-zoom-in"></i>
                                                 </figure>
                                             </Zoom>
                                         </SwiperSlide>

@@ -12164,6 +12164,18 @@ button {
   color: #ffffff;
 }
 
+i.zoom-in {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 3;
+  font-size: 1.5rem;
+  color: #ffffff;
+  pointer-events: none;
+  background-color: #000000;
+  padding: 0.5rem;
+}
+
 .form-check-input:checked[type=radio] {
   --bs-form-check-bg-image: none;
   background-color: #000000;
@@ -12310,7 +12322,7 @@ img.main_hero_img {
 
 nav.Navbar {
   background-color: #ffffff;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   position: fixed;
   height: 4.5rem;
   top: 0;
@@ -12318,12 +12330,14 @@ nav.Navbar {
   width: 100%;
   z-index: 100;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  display: flex;
+  align-items: center;
 }
 nav.Navbar i {
   font-size: 1.1rem;
 }
 nav.Navbar .main_logo {
-  width: clamp(7rem, 9vw, 16rem);
+  width: clamp(8rem, 9vw, 16rem);
 }
 
 .nav-inner {
@@ -12764,36 +12778,6 @@ section.seasonal-section .seasonal-section-inner .seasonal-caption h2, section.s
   -o-object-fit: cover;
      object-fit: cover;
 }
-.gallery-swiper .swiper-slide figure::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff;
-  opacity: 0.5;
-  z-index: 2;
-  pointer-events: none;
-  transform: translateX(-100%);
-}
-.gallery-swiper .swiper-slide figure i.icon-zoom-in {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-  font-size: 2.5rem;
-  color: #000000;
-  pointer-events: none;
-  opacity: 0;
-}
-.gallery-swiper .swiper-slide figure:hover::after {
-  transform: translateX(0);
-}
-.gallery-swiper .swiper-slide figure:hover i.icon-zoom-in {
-  opacity: 1;
-}
 
 .product-summary {
   color: #000000;
@@ -12989,7 +12973,8 @@ section.lookbook-wrapper .lookbook-image {
 }
 section.lookbook-wrapper .lookbook-image figure {
   width: 100%;
-  aspect-ratio: 1/1.5;
+  aspect-ratio: 1/1.3;
+  position: relative;
   overflow: hidden;
 }
 section.lookbook-wrapper .lookbook-image figure img {
@@ -12997,6 +12982,13 @@ section.lookbook-wrapper .lookbook-image figure img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+section.lookbook-wrapper .lookbook-image figure i.zoom-in {
+  opacity: 0;
+  transition: all ease-in-out 0.3s;
+}
+section.lookbook-wrapper .lookbook-image figure:hover i.zoom-in {
+  opacity: 1;
 }
 
 .footer {
@@ -13195,12 +13187,6 @@ section.lookbook-wrapper .lookbook-image figure img {
   section.seasonal-section .seasonal-section-inner .seasonal-caption {
     align-items: flex-start;
     padding: 0 1rem;
-  }
-  .gallery-swiper .swiper-slide figure::after {
-    display: none;
-  }
-  .gallery-swiper .swiper-slide figure i.icon-zoom-in {
-    display: none;
   }
   .footer {
     margin-bottom: 5rem;

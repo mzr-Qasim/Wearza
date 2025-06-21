@@ -57,18 +57,20 @@ button {
     max-width: 1800px;
 }
 
-.section-title{
+.section-title {
     display: flex;
     align-items: center;
     flex-direction: column;
     padding-bottom: 2rem;
-    h4{
+
+    h4 {
         font-size: clamp(1.3rem, 2vw, 1.7rem);
         font-weight: 500;
-        
+
     }
-    p{
-                font-size: clamp(1rem, 2vw, 1.1rem);
+
+    p {
+        font-size: clamp(1rem, 2vw, 1.1rem);
         font-weight: lighter;
     }
 }
@@ -115,6 +117,21 @@ button {
         background-color: $black-color;
         color: $white-color;
     }
+}
+
+
+// Zoom in
+
+i.zoom-in {
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    z-index: 3;
+    font-size: 1.5rem;
+    color: $white-color;
+    pointer-events: none;
+    background-color: $black-color;
+    padding: .5rem;
 }
 
 // Radio Buttons
@@ -179,9 +196,10 @@ button {
     background-color: orange;
 }
 
-.form-range{
+.form-range {
     color: purple;
 }
+
 // color swatches
 
 
@@ -217,7 +235,7 @@ button {
 
 // searchbar close icon
 
-.menu_close{
+.menu_close {
     position: absolute;
     top: 2rem;
     right: 2rem;

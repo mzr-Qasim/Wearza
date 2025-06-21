@@ -18,7 +18,8 @@ function LookBookProduct(props) {
 
                                 }}
                             />
-                        </figure>
+                            <i className="zoom-in icon-zoom-in"></i>
+                        </figure>                 
                     </Zoom>
                 </div>
             </div >
@@ -37,6 +38,7 @@ function LookBookProduct(props) {
 
                                 }}
                             />
+                            <i className="zoom-in icon-zoom-in"></i>
                         </figure>
                     </Zoom>
 
