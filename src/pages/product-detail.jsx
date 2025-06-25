@@ -17,11 +17,6 @@ function ProductDetail() {
     const { id } = useParams();
 
     const foundProduct = products.find(item => item.id == id);
-
-    const [productinfotabs, setProductInfoTabs] = useState(false)
-    const handleProductInfoTabs = () => {
-        setProductInfoTabs(!productinfotabs)
-    }
     return (
         <>
             <div className="title-bar">

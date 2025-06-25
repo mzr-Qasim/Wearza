@@ -14,12 +14,13 @@ import Cart from './pages/Cart';
 import { createContext } from 'react';
 
 
-export const countContext = createContext()
+
+export const CartContext = createContext()
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [cart, setCart] = useState([])
   return (
-    <countContext.Provider value={{count, setCount}}>
+    <CartContext.Provider value={{cart, setCart}}>
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -32,7 +33,7 @@ function App() {
         </Routes>
         <Footer/>
       </BrowserRouter>
-    </countContext.Provider>
+    </CartContext.Provider>
   );
 }
 

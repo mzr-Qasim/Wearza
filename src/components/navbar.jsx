@@ -2,13 +2,13 @@
 import { useState } from "react"
 import { Link } from "react-router"
 import main_logo from "/images/main_logo.svg"
-import { countContext } from "../App"
+import { CartContext } from "../App"
 import { useContext } from "react"
 
 
 function Navbar() {
+    const {cart, setCart} = useContext(CartContext)
 
-    const { count, setCount } = useContext(countContext)
 
     const [showSearchbar, setShowSearchBar] = useState(false)
     const handleSearchBar = () => {
@@ -42,7 +42,7 @@ function Navbar() {
                             <li><button onClick={handleSearchBar} className="nav-right-items"><i className="icon-search"></i><span className="right-items-title">Search</span></button></li>
                             <li><a href="" className="nav-right-items"><i className="icon-user"></i><span className="right-items-title">account</span></a></li>
                             <li><a href="" className="nav-right-items selected-items"><i className="icon-favourite"></i><span className="right-items-title">wishlist</span></a></li>
-                            <li><Link className="nav-right-items selected-items" to={"cart"}><i className="icon-cart"></i><span className="right-items-title">cart</span><span className="count">{count}</span></Link></li>
+                            <li><Link className="nav-right-items selected-items" to={"cart"}><i className="icon-cart"></i><span className="right-items-title">cart</span><span className="count">{cart.length}</span></Link></li>
                         </ul>
 
                     </div>

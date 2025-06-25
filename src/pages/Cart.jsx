@@ -1,8 +1,10 @@
 import { Link } from "react-router"
 import img from "/images/product-card-2.jpg"
-
+import { CartContext } from "../App"
+import { useContext } from "react" 
 
 function Cart() {
+    const {cart, setCart} = useContext(CartContext)
     return (
         <>
             <div className="title-bar">
@@ -38,21 +40,23 @@ function Cart() {
                             </div>
                         </div>
                     </div>
-                    <div className="cart-product">
+         {
+            cart.map(cartitem=>(
+                 <div className="cart-product">
                         <div className="row">
                             <div className="col-12 col-md-5">
                                 <div className="cart-product-info">
                                     <figure>
-                                        <img src={img} alt="" />
+                                        <img src={cartitem.image} alt="" />
                                     </figure>
                                     <div className="cart-product-info">
-                                        <b>Lace-sleeved traditional suit</b>
+                                        <b>{cartitem.title}</b>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-12 col-md-2">
                                 <div className="product-price cart-item">
-                                    <b className="cart-md-heading">PRICE</b><small>$ 400.00</small>
+                                    <b className="cart-md-heading">PRICE</b><small>$ {cartitem.price}</small>
                                 </div>
                             </div>
                             <div className="col-12 col-md-3">
@@ -75,43 +79,8 @@ function Cart() {
                             <button><i className="icon-ham_close_btn"></i></button>
                         </div>
                     </div>
-                    <div className="cart-product">
-                        <div className="row">
-                            <div className="col-12 col-md-5">
-                                <div className="cart-product-info">
-                                    <figure>
-                                        <img src={img} alt="" />
-                                    </figure>
-                                    <div className="cart-product-info">
-                                        <b>Lace-sleeved traditional suit</b>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-12 col-md-2">
-                                <div className="product-price cart-item">
-                                    <b className="cart-md-heading">PRICE</b><small>$ 400.00</small>
-                                </div>
-                            </div>
-                            <div className="col-12 col-md-3">
-                                <div className="product-quantity cart-item">
-                                    <b className="cart-md-heading">QUANTITY</b>
-                                    <div className="qty-input">
-                                        <button className="qty-count qty-count--minus" data-action="minus" type="button">-</button>
-                                        <input className="product-qty" type="number" name="product-qty" defaultValue={1} />
-                                        <button className="qty-count qty-count--add" data-action="add" type="button">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-12 col-md-2">
-                                <div className="product-total cart-item">
-                                    <b className="cart-md-heading">TOTAL</b><small>$ 800.00</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="remove-product">
-                            <button><i className="icon-ham_close_btn"></i></button>
-                        </div>
-                    </div>
+            ))
+        }
                 </div>
             </section>
         </>

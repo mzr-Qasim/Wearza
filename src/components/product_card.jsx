@@ -3,17 +3,20 @@
 import { useState } from 'react'
 import { Link } from 'react-router'
 import { Rating } from 'react-simple-star-rating'
-import { countContext } from '../App'
-import { useContext } from 'react'
+import { CartContext } from '../App'
+import { useContext } from 'react';
 
 
 
 export function ProductCard(props) {
+    const { cart, setCart } = useContext(CartContext)
 
-    const {count, setCount} = useContext(countContext)
 
-    const addToCart = () =>{
-        setCount(count + 1)
+    const addToCart = (p) => {
+        const matchedProduct = cart.find((i) => i.id == p.id)
+        if (!matchedProduct) {
+            setCart([...cart, p])
+        }
     }
 
     const [showquickview, setShowQuickView] = useState(false)
@@ -34,11 +37,11 @@ export function ProductCard(props) {
                     <ul className="product-actions">
                         <li><button><i className="icon-favourite"></i></button></li>
                         <li><button onClick={handleQuickView}><i className="icon-quick-view"></i></button></li>
-                        <li><button onClick={addToCart}><i className="icon-quick-shop"></i></button></li>
+                        <li><button onClick={() => addToCart(props.product)}><i className="icon-quick-shop"></i></button></li>
                     </ul>
-                    {/* <div className="added-to-cart">
+                    <div className={cart.find((i) => i.id == props.product.id) ? "added-to-cart" : "d-none"}>
                         <h4>ADDED TO CART</h4>
-                    </div> */}
+                    </div>
                 </figure>
                 <div className="color-swatches py-2">
                     <ul>
