@@ -12174,6 +12174,16 @@ button {
   color: #000000;
 }
 
+figure.addedCart:hover .main_img {
+  opacity: 1 !important;
+}
+figure.addedCart:hover .product-actions {
+  opacity: 0 !important;
+}
+figure.addedCart:hover .hover_img {
+  opacity: 0 !important;
+}
+
 i.zoom-in {
   position: absolute;
   top: 0.5rem;

@@ -119,16 +119,33 @@ button {
     }
 }
 
-.quaternary_btn{
+.quaternary_btn {
     color: $white-color;
     background-color: $black-color;
     border: 1px solid $white-color;
-        &:hover {
+
+    &:hover {
         background-color: $white-color;
         color: $black-color;
     }
 }
 
+
+// product added to cart
+
+figure.addedCart {
+    &:hover {
+        .main_img {
+            opacity: 1!important;
+        }
+        .product-actions {
+            opacity: 0!important;
+        }
+        .hover_img {
+            opacity: 0!important;
+        }
+    }
+}
 
 // Zoom in
 

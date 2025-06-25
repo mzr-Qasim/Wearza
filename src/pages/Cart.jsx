@@ -5,6 +5,16 @@ import { useContext } from "react"
 
 function Cart() {
     const {cart, setCart} = useContext(CartContext)
+
+    const handleRemoveProduct = (id)=>{
+        const updatedCart = cart.filter(c=>  c.id != id)
+        setCart(updatedCart)
+        
+    }
+
+    const handleClearCart = ()=>{
+        setCart([])
+    }
     return (
         <>
             <div className="title-bar">
@@ -76,11 +86,12 @@ function Cart() {
                             </div>
                         </div>
                         <div className="remove-product">
-                            <button><i className="icon-ham_close_btn"></i></button>
+                            <button onClick={()=>handleRemoveProduct(cartitem.id)}><i className="icon-ham_close_btn"></i></button>
                         </div>
                     </div>
             ))
         }
+        <button className="theme-btn primary_btn" onClick={handleClearCart}>Clear Cart</button>
                 </div>
             </section>
         </>

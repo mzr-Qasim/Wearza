@@ -12,6 +12,7 @@ import LookBook from './pages/Lookbook';
 import ProductDetail from './pages/product-detail';
 import Cart from './pages/Cart';
 import { createContext } from 'react';
+import { useEffect } from 'react';
 
 
 
@@ -19,6 +20,21 @@ export const CartContext = createContext()
 
 function App() {
   const [cart, setCart] = useState([])
+
+  useEffect(()=>{ 
+    const cartFromStorage = JSON.parse(localStorage.getItem('cart'))
+    setCart(cartFromStorage || [])
+    
+  }, [])
+
+
+  useEffect(()=> {
+    if(cart.length){
+      localStorage.setItem("cart", JSON.stringify(cart))
+    }
+  }, [cart])
+
+
   return (
     <CartContext.Provider value={{cart, setCart}}>
       <BrowserRouter>
