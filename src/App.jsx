@@ -10,13 +10,14 @@ import Shop from './pages/Shop';
 import AboutUs from './pages/About-us';
 import LookBook from './pages/Lookbook';
 import ProductDetail from './pages/product-detail';
+import Favorites from './pages/Favorites';
 import Cart from './pages/Cart';
 import { createContext } from 'react';
 import { useEffect } from 'react';
 
 
 
-export const CartContext = createContext()
+export const ShopContext = createContext()
 
 function App() {
   const [cart, setCart] = useState([])
@@ -36,7 +37,7 @@ function App() {
 
 
   return (
-    <CartContext.Provider value={{cart, setCart}}>
+    <ShopContext.Provider value={{cart, setCart}}>
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -45,11 +46,12 @@ function App() {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/lookbook" element={<LookBook />} />
           <Route path="/products/:id" element={<ProductDetail />} />
+          <Route path="/favorites" element={<Favorites />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>
         <Footer/>
       </BrowserRouter>
-    </CartContext.Provider>
+    </ShopContext.Provider>
   );
 }
 

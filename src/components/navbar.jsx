@@ -2,12 +2,12 @@
 import { useState } from "react"
 import { Link } from "react-router"
 import main_logo from "/images/main_logo.svg"
-import { CartContext } from "../App"
+import { ShopContext } from "../App"
 import { useContext } from "react"
 
 
 function Navbar() {
-    const {cart, setCart} = useContext(CartContext)
+    const {cart, setCart} = useContext(ShopContext)
 
 
     const [showSearchbar, setShowSearchBar] = useState(false)
@@ -30,10 +30,9 @@ function Navbar() {
                         <ul>
                             <li><Link to={"/"}>home</Link></li>
                             <li><Link to={"shop"}>shop</Link></li>
-                            <li><Link to={"/"}>features</Link></li>
                             <li><Link to={"lookbook"}>lookbook</Link></li>
                             <li><Link to={"about-us"}>about us</Link></li>
-                            <li><Link to={"/"}>blog</Link></li>
+                            <li><Link to={"#"}>blog</Link></li>
                         </ul>
                     </div>
                     <Link to={"/"}><img className="main_logo" src={main_logo} alt="" /></Link>
@@ -41,7 +40,7 @@ function Navbar() {
                         <ul>
                             <li><button onClick={handleSearchBar} className="nav-right-items"><i className="icon-search"></i><span className="right-items-title">Search</span></button></li>
                             <li><a href="" className="nav-right-items"><i className="icon-user"></i><span className="right-items-title">account</span></a></li>
-                            <li><a href="" className="nav-right-items selected-items"><i className="icon-favourite"></i><span className="right-items-title">wishlist</span></a></li>
+                            <li><Link className="nav-right-items selected-items" to={"favorites"}><i className="icon-favourite"></i><span className="right-items-title">wishlist</span><span className="count">0</span></Link></li>
                             <li><Link className="nav-right-items selected-items" to={"cart"}><i className="icon-cart"></i><span className="right-items-title">cart</span><span className="count">{cart.length}</span></Link></li>
                         </ul>
 
@@ -60,10 +59,9 @@ function Navbar() {
                                     <ul>
                                         <li><Link to={"/"}>home</Link></li>
                                         <li><Link to={"shop"}>shop</Link></li>
-                                        <li><a href="">features</a></li>
                                         <li><Link to={"lookbook"}>lookbook</Link></li>
                                         <li><Link to={"about-us"}>about us</Link></li>
-                                        <li><a href="">blog</a></li>
+                                        <li><Link to={"#"}>blog</Link></li>
                                     </ul>
                                 </div>
                             </div>

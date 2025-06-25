@@ -3,13 +3,13 @@
 import { useState } from 'react'
 import { Link } from 'react-router'
 import { Rating } from 'react-simple-star-rating'
-import { CartContext } from '../App'
+import { ShopContext } from '../App'
 import { useContext } from 'react';
 
 
 
 export function ProductCard(props) {
-    const { cart, setCart } = useContext(CartContext)
+    const { cart, setCart } = useContext(ShopContext)
 
 
     const addToCart = (p) => {
@@ -59,9 +59,7 @@ export function ProductCard(props) {
                                 className="swatch grey"></button>
                         </li>
 
-
                     </ul>
-
                 </div>
                 <div className="product-details">
                     <Link className="product-title" to={`/products/${props.product.id}`}>{props.product.title}</Link>
