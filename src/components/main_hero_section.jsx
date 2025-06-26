@@ -15,8 +15,8 @@ export function MainHeroSection() {
         <section className="main_hero_section">
             <div className="main_hero_inner">
                 <Swiper
-                    pagination
-                    modules={[Autoplay, Pagination]}
+                    // pagination
+                    modules={[Autoplay]}
                     slidesPerView={1}
                     loop={true}
                     autoplay={{
