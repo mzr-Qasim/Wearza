@@ -45,6 +45,9 @@ export function MainHeroSection() {
                             <div className="main_hero_caption">
                                 <div className="container custom-container-lg">
                                     <div className="caption-inner">
+                                          {/* <h2>AI Model Check</h2>
+                                        <p>Upload your photo to see if you’ve got the features of a fashion model — powered by our smart AI engine.</p>
+                                                                     <Link to={"/shop"} className="theme-btn primary_btn">try now</Link> */}
                                         <h2>New Arrivals</h2>
                                         <p >Delicate fabrics and a neutral colour palette are the details that give these pieces an edge.</p>
                                         <Link to={"/shop"} className="theme-btn primary_btn">shop now</Link>

@@ -51,7 +51,7 @@ function Footer() {
             </div>
             <div className="footer-copyright">
                 <div className="container custom-container-lg">
-                    <p>© 2025 Wearzpak. All Rights Reserved.</p>
+                    <p>© 2025 WAIRZ. All Rights Reserved.</p>
                 </div>
             </div>
         </footer>

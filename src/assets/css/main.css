@@ -12304,7 +12304,7 @@ figure.overlay::after {
 
 .main_hero_section {
   margin-top: 5.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .main_hero_inner figure {
@@ -12530,7 +12530,7 @@ section.categories {
 .categories-card figure figcaption h4, .categories-card figure figcaption .h4 {
   text-transform: uppercase;
   font-size: clamp(1.3rem, 2vw, 1.6rem);
-  font-weight: bolder;
+  font-weight: 500;
 }
 .categories-card figure:hover img {
   scale: 1.1;
@@ -13178,27 +13178,12 @@ section.lookbook-wrapper .lookbook-image figure:hover i.zoom-in {
   }
 }
 @media (max-width: 767px) {
-  .main_hero_inner figure {
-    padding: 0;
-  }
   .main_hero_inner figure img.main_hero_img {
-    position: static;
-    width: 100%;
-    height: 400px;
-    -o-object-position: top right;
-       object-position: top right;
-  }
-  .main_hero_inner figure .main_hero_caption {
-    padding: 1rem 0;
+    -o-object-position: center;
+       object-position: center;
   }
   .main_hero_inner figure .main_hero_caption .caption-inner {
     width: 100%;
-  }
-  .main_hero_inner figure .main_hero_caption .caption-inner h2, .main_hero_inner figure .main_hero_caption .caption-inner .h2 {
-    padding-bottom: 0.5rem;
-  }
-  .main_hero_inner figure .main_hero_caption .caption-inner p {
-    padding-bottom: 1rem;
   }
   section.product-cards .product-card figure:hover .main_img {
     opacity: 1;

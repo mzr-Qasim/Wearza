@@ -4,7 +4,7 @@
 
 .main_hero_section {
     margin-top: 5.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 
@@ -31,20 +31,11 @@
 
 
         }
-
-
        
     }
 
 
-
-
-
-
 }
-
-
-
 
 .main_hero_caption {
     z-index: 3;
@@ -308,7 +299,7 @@ section.categories {
             h4 {
                 text-transform: uppercase;
                 font-size: clamp(1.3rem, 2vw, 1.6rem);
-                font-weight: bolder;
+                font-weight: 500;
 
             }
         }
