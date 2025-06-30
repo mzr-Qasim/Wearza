@@ -293,6 +293,36 @@ figure.overlay{
         }
 }
 
+figure{
+    .video-options{
+        z-index: 6;
+        width: 100%;
+        display: flex;
+        justify-content: space-between!important;
+        .video-option{
+            color: $white-color;
+            background-color: $black-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: .7rem;
+            border-radius: 50%;
+            opacity: 0;
+            transition: all ease-in-out .3s;
+            i{
+                font-size: 1.5rem;
+            }
+        }
+    }
+    &:hover{
+       .video-options{
+        .video-option{
+            opacity: 1;
+        }
+    } 
+    }
+}
+
 
 // swiper pagination
 

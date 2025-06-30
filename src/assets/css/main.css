@@ -12005,8 +12005,8 @@ textarea.form-control-lg {
 }
 @font-face {
   font-family: "icomoon";
-  src: url("fonts/icomoon.eot?i1pe5f");
-  src: url("fonts/icomoon.eot?i1pe5f#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?i1pe5f") format("truetype"), url("fonts/icomoon.woff?i1pe5f") format("woff"), url("fonts/icomoon.svg?i1pe5f#icomoon") format("svg");
+  src: url("fonts/icomoon.eot?5kipsu");
+  src: url("fonts/icomoon.eot?5kipsu#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?5kipsu") format("truetype"), url("fonts/icomoon.woff?5kipsu") format("woff"), url("fonts/icomoon.svg?5kipsu#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -12057,8 +12057,16 @@ textarea.form-control-lg {
   content: "\e907";
 }
 
-.icon-zoom-in:before {
+.icon-video-no-sound:before {
   content: "\e908";
+}
+
+.icon-video-sound:before {
+  content: "\e909";
+}
+
+.icon-zoom-in:before {
+  content: "\e90a";
 }
 
 body {
@@ -12293,6 +12301,30 @@ figure.overlay::after {
   z-index: 2;
 }
 
+figure .video-options {
+  z-index: 6;
+  width: 100%;
+  display: flex;
+  justify-content: space-between !important;
+}
+figure .video-options .video-option {
+  color: #ffffff;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all ease-in-out 0.3s;
+}
+figure .video-options .video-option i {
+  font-size: 1.5rem;
+}
+figure:hover .video-options .video-option {
+  opacity: 1;
+}
+
 .swiper-pagination-bullet {
   width: 0.8rem !important;
   height: 0.8rem !important;
@@ -12316,7 +12348,7 @@ figure.overlay::after {
   justify-content: flex-end;
   align-items: flex-start;
 }
-.main_hero_inner figure img.main_hero_img {
+.main_hero_inner figure .main_hero_asset {
   position: absolute;
   top: 0;
   right: 0;
