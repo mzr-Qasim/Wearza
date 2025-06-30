@@ -15,6 +15,7 @@ export function ProductCard(props) {
     const addToCart = (p) => {
         const matchedProduct = cart.find((i) => i.id == p.id)
         if (!matchedProduct) {
+            p.qty = 1
             setCart([...cart, p])
         }
     }

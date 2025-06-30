@@ -20,7 +20,10 @@ import { useEffect } from 'react';
 export const ShopContext = createContext()
 
 function App() {
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useState(()=>{
+    const saved = localStorage.getItem("cart")
+    return saved ? JSON.parse(saved) : [];
+  })
 
   useEffect(()=>{ 
     const cartFromStorage = JSON.parse(localStorage.getItem('cart'))
