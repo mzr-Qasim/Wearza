@@ -12408,7 +12408,7 @@ nav.Navbar i {
   font-size: 1.1rem;
 }
 nav.Navbar .main_logo {
-  width: clamp(8rem, 8vw, 13rem);
+  width: clamp(7rem, 8vw, 13rem);
 }
 
 .nav-inner {
