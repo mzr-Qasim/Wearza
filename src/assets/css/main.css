@@ -12351,7 +12351,7 @@ figure:hover .video-options .video-option {
 
 .main_hero_inner figure {
   position: relative;
-  min-height: 90vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   padding: 2rem 0;
