@@ -12351,7 +12351,7 @@ figure:hover .video-options .video-option {
 
 .main_hero_inner figure {
   position: relative;
-  min-height: 80vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   padding: 2rem 0;
@@ -13222,6 +13222,9 @@ section.lookbook-wrapper .lookbook-image figure:hover i.zoom-in {
   }
 }
 @media (max-width: 767px) {
+  .main_hero_inner figure {
+    min-height: 70vh;
+  }
   .main_hero_inner figure img.main_hero_img {
     -o-object-position: center;
        object-position: center;
