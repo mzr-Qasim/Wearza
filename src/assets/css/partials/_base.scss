@@ -297,11 +297,15 @@ figure{
     .video-options{
         z-index: 6;
         width: 100%;
+
+        .video-options-inner{
         display: flex;
-        justify-content: space-between!important;
+        gap: 1rem;
+        
+        }
         .video-option{
-            color: $white-color;
-            background-color: $black-color;
+            color: $black-color;
+            background-color: $white-color;
             display: flex;
             justify-content: center;
             align-items: center;

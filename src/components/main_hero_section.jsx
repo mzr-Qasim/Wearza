@@ -26,7 +26,7 @@ export function MainHeroSection() {
         <section className="main_hero_section">
             <div className="main_hero_inner">
                 <Swiper
-                    // pagination
+                    pagination
                     modules={[Autoplay]}
                     slidesPerView={1}
                     loop={true}
@@ -42,9 +42,15 @@ export function MainHeroSection() {
                             <video className="main_hero_asset" src="https://res.cloudinary.com/dqhzrovwe/video/upload/v1751271872/video_tlj8tp.mp4" preload="metadata" autoPlay muted loop playsInline ref={videoRef}></video>
                             <div className="video-options">
                                 <div className="container custom-container-lg">
-                                    <button onClick={toggleAudio} className="play-pause video-option">
-                                        <i className={`${isMuted ? 'icon-video-no-sound' : "icon-video-sound " }`}></i>
-                                    </button>
+                                    <div className="video-options-inner">
+                                        <button className="video-option">
+                                            <i className="icon-pause-btn"></i>
+                                        </button>
+                                          <button onClick={toggleAudio} className="video-option">
+                                            <i className={`${isMuted ? 'icon-video-no-sound' : "icon-video-sound "}`}></i>
+                                        </button>
+                                    </div>
+
                                 </div>
                             </div>
                             {/* <div className="main_hero_caption">
