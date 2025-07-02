@@ -39,7 +39,7 @@ function Navbar() {
                     <div className="nav-right sm-hide">
                         <ul>
                             <li><button onClick={handleSearchBar} className="nav-right-items"><i className="icon-search"></i><span className="right-items-title">Search</span></button></li>
-                            <li><a href="" className="nav-right-items"><i className="icon-user"></i><span className="right-items-title">account</span></a></li>
+                            <li><Link className="nav-right-items" to={"login"}><i className="icon-user"></i><span className="right-items-title">account</span></Link></li>
                             <li><Link className="nav-right-items selected-items" to={"favorites"}><i className="icon-favourite"></i><span className="right-items-title">wishlist</span><span className="count">0</span></Link></li>
                             <li><Link className="nav-right-items selected-items" to={"cart"}><i className="icon-cart"></i><span className="right-items-title">cart</span><span className="count">{cart.length}</span></Link></li>
                         </ul>

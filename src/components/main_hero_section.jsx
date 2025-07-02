@@ -13,12 +13,26 @@ import React, { useRef, useState } from 'react';
 export function MainHeroSection() {
     const videoRef = useRef(null);
     const [isMuted, setIsMuted] = useState(true);
+    const [isPlaying, setIsPlaying] = useState(true);
 
     const toggleAudio = () => {
         const video = videoRef.current;
         if (video) {
             video.muted = !video.muted;
             setIsMuted(video.muted);
+        }
+    };
+
+    const togglePlayPause = () => {
+        const video = videoRef.current;
+        if (video) {
+            if (video.paused) {
+                video.play();
+                setIsPlaying(true);
+            } else {
+                video.pause();
+                setIsPlaying(false);
+            }
         }
     };
 
@@ -30,38 +44,24 @@ export function MainHeroSection() {
                     modules={[Autoplay]}
                     slidesPerView={1}
                     loop={true}
-                    // autoplay={{
-                    //     delay: 4000,
-                    //     disableOnInteraction: false,
-                    // }}
                     className="hero-swiper"
                 >
                     <SwiperSlide>
                         <figure>
-                            {/* <img className="main_hero_asset" src={main_hero_img} alt="" /> */}
-                            <video className="main_hero_asset" src="https://res.cloudinary.com/dqhzrovwe/video/upload/v1751271872/video_tlj8tp.mp4" preload="metadata" autoPlay muted loop playsInline ref={videoRef}></video>
+                            <video className="main_hero_asset" src="https://res.cloudinary.com/dqhzrovwe/video/upload/v1751271872/video_tlj8tp.mp4" preload="metadata" autoPlay muted={isMuted} loop playsInline ref={videoRef}></video>
                             <div className="video-options">
                                 <div className="container custom-container-lg">
                                     <div className="video-options-inner">
-                                        <button className="video-option">
-                                            <i className="icon-pause-btn"></i>
+                                        <button className="video-option" onClick={togglePlayPause}>
+                                            <i className={`${isPlaying ? 'icon-pause-btn' : 'icon-play-btn'}`}></i>
                                         </button>
                                           <button onClick={toggleAudio} className="video-option">
-                                            <i className={`${isMuted ? 'icon-video-no-sound' : "icon-video-sound "}`}></i>
+                                            <i className={`${isMuted ? 'icon-video-no-sound' : "icon-video-sound"}`}></i>
                                         </button>
                                     </div>
 
                                 </div>
                             </div>
-                            {/* <div className="main_hero_caption">
-                                <div className="container custom-container-lg">
-                                    <div className="caption-inner">
-                                        <h2>New Arrivals</h2>
-                                        <p >Delicate fabrics and a neutral colour palette are the details that give these pieces an edge.</p>
-                                        <Link to={"/shop"} className="theme-btn primary_btn">shop now</Link>
-                                    </div>
-                                </div>
-                            </div> */}
                         </figure>
                     </SwiperSlide>
                     <SwiperSlide>
