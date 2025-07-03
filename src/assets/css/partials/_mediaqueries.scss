@@ -5,16 +5,18 @@
 
     .navbar-offcanvas {
         display: flex !important;
-
-        .nav-left-md {
+        .offcanvas-body{
             display: flex;
-
+            justify-content: center;
+            align-items: center;
+        }
+        .nav-left-md {
             ul {
-                display: flex;
-                flex-direction: column;
-
-
                 li {
+                    a{
+                        font-size: 1.5rem;
+                        font-weight: 500;
+                    }
                     &:not(:last-child) {
                         margin-bottom: 1rem;
                     }
