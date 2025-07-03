@@ -43,26 +43,26 @@ export function ProductCard(props) {
                     <div className={cart.find((i) => i.id == props.product.id) ? "added-to-cart" : "d-none"}>
                         <h4>ADDED TO CART</h4>
                     </div>
-                </figure> 
-                <div className="product-details">
-                    <div className="color-swatches pt-3">
-                    <ul>
+                </figure>
+                <div className="product-details pt-3">
+                    <div className="color-swatches">
+                        <ul>
 
-                        <li>
-                            <button
-                                className="swatch black active"></button>
-                        </li>
-                        <li>
-                            <button
-                                className="swatch brown"></button>
-                        </li>
-                        <li>
-                            <button
-                                className="swatch grey"></button>
-                        </li>
+                            <li>
+                                <button
+                                    className="swatch black active"></button>
+                            </li>
+                            <li>
+                                <button
+                                    className="swatch brown"></button>
+                            </li>
+                            <li>
+                                <button
+                                    className="swatch grey"></button>
+                            </li>
 
-                    </ul>
-                </div>
+                        </ul>
+                    </div>
                     <Link className="product-title" to={`/products/${props.product.id}`}>{props.product.title}</Link>
                     <small className="product-price pt-1">${props.product.price}</small>
                 </div>
