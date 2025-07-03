@@ -4,7 +4,7 @@
 
 .main_hero_section {
     margin-top: 5.5rem;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
 }
 
 
@@ -87,7 +87,7 @@ nav.Navbar {
     }
 
     .main_logo {
-        width: clamp(7rem, 8vw, 13rem);
+        width: clamp(7rem, 7vw, 12rem);
     }
 
 }
@@ -451,13 +451,16 @@ section.product-cards {
 
 
         .product-details {
-
+            display: flex;
+            flex-direction: column;
+            gap: .4rem;
 
             .product-title {
                 color: $black-color;
                 text-transform: uppercase;
                 font-weight: 500;
                 font-size: 1.1rem;
+
             }
 
             small {

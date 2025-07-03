@@ -174,7 +174,8 @@ function Cart() {
               <div className="products-header mb-3">
                 <div className="product-header-inner">
                   <div className="row">
-                    <div className="col-5"><small>PRODUCT</small></div>
+                    <div className="col-2"><small>PRODUCT</small></div>
+                    <div className="col-3"><small>TITLE</small></div>
                     <div className="col-2"><small>PRICE</small></div>
                     <div className="col-3"><small>QUANTITY</small></div>
                     <div className="col-2"><small>TOTAL</small></div>
@@ -185,17 +186,18 @@ function Cart() {
               {cart.map((cartitem) => (
                 <div className="cart-product" key={cartitem.id}>
                   <div className="row">
-                    <div className="col-12 col-md-5">
+                    <div className="col-3 col-md-2">
                       <div className="cart-product-info d-flex align-items-center">
                         <figure>
                           <img src={cartitem.image} alt={cartitem.title} />
                         </figure>
-                        <div className="ms-3">
-                          <b>{cartitem.title}</b>
-                        </div>
                       </div>
                     </div>
-
+                    <div className="col-3 col-md-3">
+                      <div className="cart-item ">
+                        <b>{cartitem.title}</b>
+                        </div>
+                    </div>
                     <div className="col-12 col-md-2">
                       <div className="product-price cart-item">
                         <b className="cart-md-heading">PRICE</b>

@@ -12366,7 +12366,7 @@ figure:hover .video-options .video-option {
 
 .main_hero_section {
   margin-top: 5.5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 .main_hero_inner figure {
@@ -12428,7 +12428,7 @@ nav.Navbar i {
   font-size: 1.1rem;
 }
 nav.Navbar .main_logo {
-  width: clamp(7rem, 8vw, 13rem);
+  width: clamp(7rem, 7vw, 12rem);
 }
 
 .nav-inner {
@@ -12690,6 +12690,11 @@ section.product-cards .product-card figure:hover .product-actions {
 }
 section.product-cards .product-card figure:hover .hover_img {
   opacity: 1;
+}
+section.product-cards .product-card .product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 section.product-cards .product-card .product-details .product-title {
   color: #000000;
@@ -13336,6 +13341,11 @@ section.Create-account .create-account-wrapper {
   }
   .gallery-swiper .swiper-button-next {
     display: flex;
+  }
+  section.Login .col-inner .login-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
   }
   .footer {
     margin-bottom: 5rem;

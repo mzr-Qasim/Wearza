@@ -43,8 +43,9 @@ export function ProductCard(props) {
                     <div className={cart.find((i) => i.id == props.product.id) ? "added-to-cart" : "d-none"}>
                         <h4>ADDED TO CART</h4>
                     </div>
-                </figure>
-                <div className="color-swatches py-2">
+                </figure> 
+                <div className="product-details">
+                    <div className="color-swatches pt-3">
                     <ul>
 
                         <li>
@@ -62,7 +63,6 @@ export function ProductCard(props) {
 
                     </ul>
                 </div>
-                <div className="product-details">
                     <Link className="product-title" to={`/products/${props.product.id}`}>{props.product.title}</Link>
                     <small className="product-price pt-1">${props.product.price}</small>
                 </div>
