@@ -131,8 +131,8 @@ function Cart() {
           action === "add"
             ? item.qty + 1
             : item.qty > 1
-            ? item.qty - 1
-            : 1;
+              ? item.qty - 1
+              : 1;
         return { ...item, qty: newQty };
       }
       return item;
@@ -159,7 +159,7 @@ function Cart() {
       <section className="cart-products">
         <div className="container custom-container-lg">
           {cart.length === 0 ? (
-            <div className="text-center py-5">
+            <div className="d-flex flex-column align-items-center py-5">
               <h4 className="pb-5">You don't have any items in your cart.</h4>
               <Link className="theme-btn primary_btn" to={"/shop"}>
                 continue shopping
@@ -245,7 +245,7 @@ function Cart() {
                 </div>
               ))}
 
-              <div className="cart-footer mt-4">
+              <div className="cart-footer my-4">
                 <div className="d-flex justify-content-between align-items-center">
                   <button
                     className="theme-btn primary_btn"
@@ -253,7 +253,17 @@ function Cart() {
                   >
                     Clear Cart
                   </button>
-                  <h4>Grand Total: ${calculateGrandTotal()}</h4>
+                </div>
+              </div>
+              <div className="cart-details-wrapper">
+                <div className="row">
+                  <div className="col-lg-4 offset-lg-8">
+                    <div className="col-inner">
+                      <b className="mb-4">Grand Total:<span>${calculateGrandTotal()}</span></b>
+                      <Link className="theme-btn primary_btn w-100 mb-3">proceed to checkout</Link>
+                      <Link to={"/shop"} className="theme-btn tertiary_btn w-100">continue shopping</Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             </>

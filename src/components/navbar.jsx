@@ -7,7 +7,7 @@ import { useContext } from "react"
 
 
 function Navbar() {
-    const {cart, setCart} = useContext(ShopContext)
+    const { cart, setCart } = useContext(ShopContext)
 
 
     const [showSearchbar, setShowSearchBar] = useState(false)
@@ -33,6 +33,7 @@ function Navbar() {
                             <li><Link to={"lookbook"}>lookbook</Link></li>
                             <li><Link to={"about-us"}>about us</Link></li>
                             <li><Link to={"#"}>blog</Link></li>
+                            <li><Link>another</Link></li>
                         </ul>
                     </div>
                     <Link to={"/"}><img className="main_logo" src={main_logo} alt="" /></Link>
@@ -62,6 +63,7 @@ function Navbar() {
                                         <li><Link to={"lookbook"}>lookbook</Link></li>
                                         <li><Link to={"about-us"}>about us</Link></li>
                                         <li><Link to={"#"}>blog</Link></li>
+                                        <li><Link>another</Link></li>
                                     </ul>
                                 </div>
                             </div>

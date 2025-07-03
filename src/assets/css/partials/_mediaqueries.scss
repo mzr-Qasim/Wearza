@@ -87,6 +87,7 @@
     .main_hero_inner {
         figure {
             min-height: 70vh;
+
             // padding: 0;
             img.main_hero_img {
                 // position: static;
@@ -158,6 +159,13 @@
     .cart-item {
         .cart-md-heading {
             display: flex !important;
+        }
+    }
+
+    section.Login {
+        .col-inner {
+            height: auto;
+            margin-bottom: 2rem;
         }
     }
 

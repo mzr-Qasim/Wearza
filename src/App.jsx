@@ -10,6 +10,7 @@ import Shop from './pages/Shop';
 import AboutUs from './pages/About-us';
 import LookBook from './pages/Lookbook';
 import Login from './pages/Login';
+import Create_Account from './pages/Create-Account';
 import ProductDetail from './pages/product-detail';
 import Favorites from './pages/Favorites';
 import Cart from './pages/Cart';
@@ -49,6 +50,7 @@ function App() {
           <Route path="/shop" element={<Shop />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/create-account" element={<Create_Account />} />
           <Route path="/lookbook" element={<LookBook />} />
           <Route path="/products/:id" element={<ProductDetail />} />
           <Route path="/favorites" element={<Favorites />} />
