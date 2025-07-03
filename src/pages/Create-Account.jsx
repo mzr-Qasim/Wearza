@@ -23,10 +23,10 @@ function Create_Account() {
                         <div className="row">
                             <div className="col-md-12">
                                 <div className="col-inner">
-                                    <input type="text" className="mb-3" placeholder="First Name" />
-                                    <input type="text" className="mb-4" placeholder="Last Name" />
-                                    <input type="text" className="mb-4" placeholder="Email" />
-                                    <input type="text" className="mb-4" placeholder="Password" />
+                                    <input type="text" className="mb-3 form" placeholder="First Name" />
+                                    <input type="text" className="mb-4 form" placeholder="Last Name" />
+                                    <input type="text" className="mb-4 form" placeholder="Email" />
+                                    <input type="text" className="mb-4 form" placeholder="Password" />
                                     <button className="theme-btn primary_btn" type="submit">submit</button>
                                 </div>
                             </div>

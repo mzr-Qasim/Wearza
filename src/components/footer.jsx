@@ -41,7 +41,7 @@ function Footer() {
                             <ul className="footer-col-links">
                                 <li className="pb-2"><b>NEWSLETTER</b></li>
                                 <li><p>Enter your email to receive daily news and get 20% off coupon for all items.</p></li>
-                                <li><input type="text" placeholder="Email address" /></li>
+                                <li><input type="text" className="form" placeholder="Email address" /></li>
                                 <li><button className="theme-btn primary_btn">SUBMIT</button></li>
                             </ul>
                         </div>
