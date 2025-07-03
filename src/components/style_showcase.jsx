@@ -5,7 +5,7 @@ export function StyleShowCaseCard(props) {
     return (
         <div className="col-md-6 col-lg-6">
             <div className="showcasecard">
-                <figure className="pb-4">
+                <figure className="pb-3">
                     {/* <video src={props.product.video}
                         preload="metadata" autoPlay muted loop playsInline></video> */}
                         <img src={props.product.image} alt="" />

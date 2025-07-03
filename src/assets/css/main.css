@@ -12387,8 +12387,8 @@ figure:hover .video-options .video-option {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: 1;
-  -o-object-position: top center;
-     object-position: top center;
+  -o-object-position: top;
+     object-position: top;
 }
 
 .main_hero_caption {
