@@ -207,6 +207,23 @@ nav.Navbar {
     transform: translateX(0) !important;
 }
 
+// shop genie
+
+.shop-genie{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 99;
+    background-color: cyan;
+    color: $black-color;
+    padding: 1rem;
+
+}
+.shop-genie-canvas{
+    height: 50vh!important;
+}
+
+
 // Search Menu
 .searchMenu {
     min-height: 50vh;
@@ -839,13 +856,13 @@ section.seasonal-section {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: .2rem;
+        padding: .5rem;
 
         i {
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: $white-color;
         }
     }
@@ -856,6 +873,10 @@ section.seasonal-section {
     display: flex;
     align-items: center;
     height: 100%;
+
+    .cart-product-title{
+        text-transform: uppercase;
+    }
 }
 
 
@@ -1093,8 +1114,6 @@ section.Create-account {
 .footer {
     background-color: $white-color;
     position: relative;
-    // margin-bottom: 20rem;
-
     &::before {
         content: '';
         position: absolute;

@@ -5,8 +5,11 @@ import 'react-medium-image-zoom/dist/styles.css';
 import { BrowserRouter, Routes, Route } from "react-router";
 import Home from "./pages/Home"
 import Navbar from "./components/navbar"
+import Shop_Genie from './components/shop_genie';
 import Footer from './components/footer';
 import Shop from './pages/Shop';
+import Blog from './pages/Blog';
+import AI_Stylist from './pages/AI-stylist';
 import AboutUs from './pages/About-us';
 import LookBook from './pages/Lookbook';
 import Login from './pages/Login';
@@ -50,12 +53,15 @@ function App() {
           <Route path="/shop" element={<Shop />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/AI-Stylist" element={<AI_Stylist />} />
           <Route path="/create-account" element={<Create_Account />} />
           <Route path="/lookbook" element={<LookBook />} />
           <Route path="/products/:id" element={<ProductDetail />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>
+        <Shop_Genie/>
         <Footer/>
       </BrowserRouter>
     </ShopContext.Provider>

@@ -155,7 +155,6 @@ function Cart() {
           </div>
         </div>
       </div>
-
       <section className="cart-products">
         <div className="container custom-container-lg">
           {cart.length === 0 ? (
@@ -174,10 +173,10 @@ function Cart() {
               <div className="products-header mb-3">
                 <div className="product-header-inner">
                   <div className="row">
-                    <div className="col-2"><small>PRODUCT</small></div>
+                    <div className="col-3"><small>PRODUCT</small></div>
                     <div className="col-3"><small>TITLE</small></div>
                     <div className="col-2"><small>PRICE</small></div>
-                    <div className="col-3"><small>QUANTITY</small></div>
+                    <div className="col-2"><small>QUANTITY</small></div>
                     <div className="col-2"><small>TOTAL</small></div>
                   </div>
                 </div>
@@ -186,26 +185,26 @@ function Cart() {
               {cart.map((cartitem) => (
                 <div className="cart-product" key={cartitem.id}>
                   <div className="row">
-                    <div className="col-3 col-md-2">
+                    <div className="col-4 col-md-3">
                       <div className="cart-product-info d-flex align-items-center">
                         <figure>
                           <img src={cartitem.image} alt={cartitem.title} />
                         </figure>
                       </div>
                     </div>
-                    <div className="col-3 col-md-3">
+                    <div className="col-8 col-md-3">
                       <div className="cart-item ">
-                        <b>{cartitem.title}</b>
+                        <h6 className="cart-product-title"><b>{cartitem.title}</b></h6>
                         </div>
                     </div>
                     <div className="col-12 col-md-2">
                       <div className="product-price cart-item">
                         <b className="cart-md-heading">PRICE</b>
-                        <small>${cartitem.price.toFixed(2)}</small>
+                        <h6>${cartitem.price.toFixed(2)}</h6>
                       </div>
                     </div>
 
-                    <div className="col-12 col-md-3">
+                    <div className="col-12 col-md-2">
                       <div className="product-quantity cart-item">
                         <b className="cart-md-heading">QUANTITY</b>
                         <div className="qty-input d-flex align-items-center">
@@ -234,14 +233,14 @@ function Cart() {
                     <div className="col-12 col-md-2">
                       <div className="product-total cart-item">
                         <b className="cart-md-heading">TOTAL</b>
-                        <small>${calculateItemTotal(cartitem)}</small>
+                        <h6>${calculateItemTotal(cartitem)}</h6>
                       </div>
                     </div>
                   </div>
 
                   <div className="remove-product text-end">
                     <button onClick={() => handleRemoveProduct(cartitem.id)}>
-                      <i className="icon-ham_close_btn"></i>
+                      <i className="icon-product-remove"></i>
                     </button>
                   </div>
                 </div>
