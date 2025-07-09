@@ -40,7 +40,7 @@ function Navbar() {
                     <div className="nav-right sm-hide">
                         <ul>
                             {/* <li><button onClick={handleSearchBar} className="nav-right-items"><i className="icon-search"></i><span className="right-items-title">Search</span></button></li> */}
-                            <li><button class="nav-right-items" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i className="icon-search"></i><span className="right-items-title">Search</span></button></li>
+                            <li><button className="nav-right-items" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i className="icon-search"></i><span className="right-items-title">Search</span></button></li>
                             <li><Link className="nav-right-items" to={"login"}><i className="icon-user"></i><span className="right-items-title">account</span></Link></li>
                             <li><Link className="nav-right-items selected-items" to={"favorites"}><i className="icon-favourite"></i><span className="right-items-title">wishlist</span><span className="count">0</span></Link></li>
                             <li><Link className="nav-right-items selected-items" to={"cart"}><i className="icon-cart"></i><span className="right-items-title">cart</span><span className="count">{cart.length}</span></Link></li>
@@ -83,11 +83,11 @@ function Navbar() {
                     </div>
                 </div>
             </div> */}
-            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-                <div class="offcanvas-header">
-                    <button class="menu_close" data-bs-dismiss="offcanvas" aria-label="Close"><i className="icon-ham_close_btn"></i></button>
+            <div className="offcanvas offcanvas-top" tabIndex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                <div className="offcanvas-header">
+                    <button className="menu_close" data-bs-dismiss="offcanvas" aria-label="Close"><i className="icon-ham_close_btn"></i></button>
                 </div>
-                <div class="offcanvas-body d-flex flex-colum align-items-center">
+                <div className="offcanvas-body d-flex flex-colum align-items-center">
                     <div className="container">
                         <div className="search-input-inner">
                             <input className="searchInput" placeholder="Search for products, brands and more" type="text" name="search" />

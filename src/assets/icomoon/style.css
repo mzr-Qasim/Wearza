@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?ne3o2k');
-  src:  url('fonts/icomoon.eot?ne3o2k#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?ne3o2k') format('truetype'),
-    url('fonts/icomoon.woff?ne3o2k') format('woff'),
-    url('fonts/icomoon.svg?ne3o2k#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?ubz27l');
+  src:  url('fonts/icomoon.eot?ubz27l#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ubz27l') format('truetype'),
+    url('fonts/icomoon.woff?ubz27l') format('woff'),
+    url('fonts/icomoon.svg?ubz27l#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -55,15 +55,18 @@
 .icon-search:before {
   content: "\e909";
 }
-.icon-user:before {
+.icon-submit-btn:before {
   content: "\e90a";
 }
-.icon-video-no-sound:before {
+.icon-user:before {
   content: "\e90b";
 }
-.icon-video-sound:before {
+.icon-video-no-sound:before {
   content: "\e90c";
 }
-.icon-zoom-in:before {
+.icon-video-sound:before {
   content: "\e90d";
+}
+.icon-zoom-in:before {
+  content: "\e90e";
 }

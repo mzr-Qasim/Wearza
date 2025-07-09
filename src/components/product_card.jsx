@@ -1,6 +1,5 @@
 
 
-import { useState } from 'react'
 import { Link } from 'react-router'
 import { Rating } from 'react-simple-star-rating'
 import { ShopContext } from '../App'
@@ -20,10 +19,6 @@ export function ProductCard(props) {
         }
     }
 
-    const [showquickview, setShowQuickView] = useState(false)
-    const handleQuickView = () => {
-        setShowQuickView(!showquickview)
-    }
     return (
         <div className="col-sm-6 col-md-4 col-lg-4 col-xl-3">
             <div className="product-card">
@@ -37,7 +32,7 @@ export function ProductCard(props) {
                     </div>
                     <ul className="product-actions">
                         <li><button><i className="icon-favourite"></i></button></li>
-                        <li><button onClick={handleQuickView}><i className="icon-quick-view"></i></button></li>
+                        <li><button data-bs-toggle="offcanvas" data-bs-target="#genieBot" aria-controls="offcanvasTop"><i className="icon-quick-view"></i></button></li>
                         <li><button onClick={() => addToCart(props.product)}><i className="icon-quick-shop"></i></button></li>
                     </ul>
                     <div className={cart.find((i) => i.id == props.product.id) ? "added-to-cart" : "d-none"}>
@@ -47,7 +42,6 @@ export function ProductCard(props) {
                 <div className="product-details pt-3">
                     <div className="color-swatches">
                         <ul>
-
                             <li>
                                 <button
                                     className="swatch black active"></button>
@@ -60,14 +54,17 @@ export function ProductCard(props) {
                                 <button
                                     className="swatch grey"></button>
                             </li>
-
                         </ul>
                     </div>
                     <Link className="product-title" to={`/products/${props.product.id}`}>{props.product.title}</Link>
                     <small className="product-price pt-1">${props.product.price}</small>
                 </div>
-                <div className={`quick-view ${showquickview ? "show-quick-view" : ""}`}>
-                    <button className="menu_close" onClick={handleQuickView}><i className="icon-ham_close_btn"></i></button>
+                <div className="offcanvas quick-view" tabIndex="-1" id="genieBot">
+                    <div className="offcanvas-header">
+                        <button className="menu_close" data-bs-dismiss="offcanvas" aria-label="Close"><i className="icon-ham_close_btn"></i></button>
+                    </div>
+                    <div className="offcanvas-body">
+                    </div>
                 </div>
             </div>
         </div>
