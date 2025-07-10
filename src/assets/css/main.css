@@ -12530,19 +12530,16 @@ nav.Navbar .main_logo {
 
 .shop-genie-canvas {
   height: 60vh !important;
-  background: radial-gradient(circle at 30% 30%, #4a00e0, #8e2de2 40%, #3c1f69 70%, #0f0c29 100%);
+  background: linear-gradient(135deg, #ffffff, #f9f5f0);
   color: #ffffff;
   overflow-y: auto;
   max-height: 80%;
-}
-.shop-genie-canvas .menu_close {
-  color: #ffffff;
 }
 .shop-genie-canvas .ai-bot-inner {
   position: relative;
 }
 .shop-genie-canvas .ai-bot-inner textarea {
-  background: #000000;
+  background-color: #1b1b1b;
   color: #ffffff;
   resize: none;
   border: 2px solid transparent;
@@ -12554,14 +12551,16 @@ nav.Navbar .main_logo {
   font-size: 1.2rem;
 }
 .shop-genie-canvas .ai-bot-inner textarea:focus {
-  border-color: #a855f7;
-  box-shadow: 0 0 10px #a855f7, 0 0 20px #9333ea;
+  border-color: #d4af37;
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
 }
 .shop-genie-canvas .ai-bot-inner textarea::-moz-placeholder {
   font-size: 1.2rem;
+  color: #ffffff;
 }
 .shop-genie-canvas .ai-bot-inner textarea::placeholder {
   font-size: 1.2rem;
+  color: #ffffff;
 }
 .shop-genie-canvas .ai-bot-inner .bot-submit-btn {
   position: absolute;
@@ -12575,9 +12574,12 @@ nav.Navbar .main_logo {
 }
 .shop-genie-canvas .ai-bot-inner .bot-submit-btn i {
   font-size: 1.3rem;
+  transition: all ease-in-out 0.3s;
 }
 .shop-genie-canvas .ai-bot-inner .bot-submit-btn:hover {
-  background-color: #a855f7;
+  background-color: #000000;
+}
+.shop-genie-canvas .ai-bot-inner .bot-submit-btn:hover i {
   color: #ffffff;
 }
 

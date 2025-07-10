@@ -204,22 +204,16 @@ nav.Navbar {
 
 .shop-genie-canvas {
     height: 60vh !important;
-    background: radial-gradient(circle at 30% 30%,
-            #4a00e0,
-            #8e2de2 40%,
-            #3c1f69 70%,
-            #0f0c29 100%);
+    background: linear-gradient(135deg, #ffffff, #f9f5f0);
     color: $white-color;
     overflow-y: auto;
     max-height: 80%;
-    .menu_close {
-        color: $white-color;
-    }
 
     .ai-bot-inner {
         position: relative;
+
         textarea {
-            background: $black-color;
+            background-color: #1b1b1b;
             color: $white-color;
             resize: none;
             border: 2px solid transparent;
@@ -229,15 +223,19 @@ nav.Navbar {
             transition: border 0.3s, box-shadow 0.3s;
             outline: none;
             font-size: 1.2rem;
+
             &:focus {
-                border-color: #a855f7;
-                box-shadow: 0 0 10px #a855f7, 0 0 20px #9333ea;
+                border-color: #d4af37;
+                box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
             }
+
             &::placeholder {
                 font-size: 1.2rem;
+                color: $white-color;
             }
         }
-        .bot-submit-btn{
+
+        .bot-submit-btn {
             position: absolute;
             bottom: 1.2rem;
             right: 1.2rem;
@@ -246,12 +244,18 @@ nav.Navbar {
             height: 2.5rem;
             border-radius: 50%;
             transition: all ease-in-out .3s;
-            i{
+
+            i {
                 font-size: 1.3rem;
+                transition: all ease-in-out .3s;
             }
-            &:hover{
-                background-color: #a855f7;
-                color: $white-color;
+
+            &:hover {
+                background-color: $black-color;
+
+                i {
+                    color: $white-color;
+                }
             }
         }
     }
