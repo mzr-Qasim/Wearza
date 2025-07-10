@@ -1,7 +1,9 @@
 
 import { Link } from "react-router"
-
+import { useForm } from "react-hook-form"
 function Footer() {
+        const {register, handleSubmit, watch, formState: { errors }} = useForm()
+            const onSubmit = (data) => console.log(data)
     return (
         <footer className="footer mt-5">
             <div className="container custom-container-lg">
@@ -41,11 +43,12 @@ function Footer() {
                             <ul className="footer-col-links">
                                 <li className="pb-2"><b>NEWSLETTER</b></li>
                                 <li><p>Enter your email to receive daily news and get 20% off coupon for all items.</p></li>
-                                <li><input type="text" className="form" placeholder="Email address" /></li>
-                                <li><button className="theme-btn primary_btn">SUBMIT</button></li>
+                                <form onSubmit={handleSubmit(onSubmit)}>
+                                <li><input {...register("subscribe-email", { required: true })} type="text" className="form" name="subscribe-email" placeholder="Email address" /></li>
+                                <li><button type="submit" className="theme-btn primary_btn">SUBMIT</button></li>
+                                </form>
                             </ul>
                         </div>
-
                     </div>
                 </div>
             </div>

@@ -210,41 +210,49 @@ nav.Navbar {
             #3c1f69 70%,
             #0f0c29 100%);
     color: $white-color;
-      overflow-y: auto;
-  max-height: 80%;
-
+    overflow-y: auto;
+    max-height: 80%;
     .menu_close {
         color: $white-color;
     }
 
-    .search-input-inner {
-        .search_query {
-            background-color: $black-color;
-            height: 100%;
-            width: 5rem;
-
-            i {
-                font-size: 1.5rem;
-                color: cyan;
-                transition: all ease-in-out .3s;
+    .ai-bot-inner {
+        position: relative;
+        textarea {
+            background: $black-color;
+            color: $white-color;
+            resize: none;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            padding: 15px;
+            width: 100%;
+            transition: border 0.3s, box-shadow 0.3s;
+            outline: none;
+            font-size: 1.2rem;
+            &:focus {
+                border-color: #a855f7;
+                box-shadow: 0 0 10px #a855f7, 0 0 20px #9333ea;
             }
-
-            &:hover {
-                i {
-                    color: $white-color;
-                }
+            &::placeholder {
+                font-size: 1.2rem;
             }
-
         }
-    }
-
-    .searchInput {
-        padding: .5rem 2rem;
-        padding-right: 6rem;
-        font-size: 1.3rem;
-
-        &::placeholder{
-            font-size: 1.3rem;
+        .bot-submit-btn{
+            position: absolute;
+            bottom: 1.2rem;
+            right: 1.2rem;
+            background-color: $white-color;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            transition: all ease-in-out .3s;
+            i{
+                font-size: 1.3rem;
+            }
+            &:hover{
+                background-color: #a855f7;
+                color: $white-color;
+            }
         }
     }
 }
@@ -521,7 +529,7 @@ section.product-cards {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%)!important;
+    transform: translate(-50%, -50%) !important;
     z-index: 2000;
 
 }
@@ -971,7 +979,7 @@ section.seasonal-section {
                 }
             }
 
-           
+
         }
     }
 

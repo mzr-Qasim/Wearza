@@ -28,11 +28,11 @@ function Login() {
                                 <b className="pb-3">LOGIN</b>
                                 <small className="mb-4">If you have an account with us, please log in.</small>
                                 <form onSubmit={handleSubmit(onSubmit)}>
-                                    <input {...register("email", { required: true })}  type="text" className="mb-3 form" name="email" placeholder="Email" />
+                                    <input {...register("email", { required: true })}  type="text" className="mb-4 form" name="email" placeholder="Email" />
                                     {errors.email && <span style={{color:"red"}}>This field is required</span>}
-                                    <input {...register("password", { required: true })}  type="password" className="mb-4 form" name="password" placeholder="Password" />
+                                    <input {...register("password", { required: true })}  type="password" className="mt-2 mb-2 form" name="password" placeholder="Password" />
                                     {errors.password && <span style={{color:"red"}}>This field is required</span>}
-                                    <div className="login-info">
+                                    <div className="login-info mt-2">
                                         <button className="theme-btn primary_btn" type="submit">sign in</button>
                                         <Link className="forgot-password">Forgot your password?</Link>
                                     </div>
