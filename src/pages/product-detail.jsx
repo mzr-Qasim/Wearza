@@ -36,9 +36,7 @@ function ProductDetail() {
                             <div className="col-md-12 col-lg-7">
                                 <div className="product-gallery view-section">
                                     <Swiper className="gallery-swiper"
-                                        // spaceBetween={10}
                                         navigation
-                                        // loop={true}
                                         thumbs={{ swiper: thumbsSwiper }}
                                         modules={[Navigation]}
                                         spaceBetween={10}

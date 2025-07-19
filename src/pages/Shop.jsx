@@ -3,15 +3,27 @@ import { Link } from "react-router"
 import { ProductCard } from "../components/product_card"
 import { products } from '../productCardData'
 
+
+
 function Shop() {
     const [showFilter, setShowFilter] = useState(false)
+   
+
     const handleFilter = () => {
         setShowFilter(!showFilter)
     }
+    let allColors = [];
+    products.map(product => {
+        allColors = allColors.concat(product.colors);
+    });
+    const uniqueColors = allColors.filter((color, index) => {
+        return allColors.indexOf(color) === index;
+    });
     return (
+
         <>
             <div className="title-bar">
-                <div className="container custom-container-lg"> 
+                <div className="container custom-container-lg">
                     <div className="title-bar-inner">
                         <Link className="title-bar-link" to={"/"}>Home</Link>
                         <span>Collection</span>
@@ -25,24 +37,13 @@ function Shop() {
                     <strong className="filter-title">Color</strong>
                     <div className="colors-inner pb-4">
                         <div className="Colors Varaint pt-3">
-                            <div className="form-check categories-filter">
-                                <input className="form-check-input purple_radio color_theme_radio theme-radio-checked" type="radio" name="flexRadioDefault1" id="flexRadioDefault1" />
-                            </div>
-                            <div className="form-check categories-filter">
-                                <input className="form-check-input green_radio color_theme_radio theme-radio-checked" type="radio" name="flexRadioDefault1" id="flexRadioDefault2" />
-                            </div>
-                            <div className="form-check categories-filter">
-                                <input className="form-check-input red_radio color_theme_radio theme-radio-checked" type="radio" name="flexRadioDefault1" id="flexRadioDefault3" />
-                            </div>
-                            <div className="form-check categories-filter">
-                                <input className="form-check-input black_radio color_theme_radio theme-radio-checked" type="radio" name="flexRadioDefault1" id="flexRadioDefault4" />
-                            </div>
-                            <div className="form-check categories-filter">
-                                <input className="form-check-input cyan_radio color_theme_radio theme-radio-checked" type="radio" name="flexRadioDefault1" id="flexRadioDefault5" />
-                            </div>
-                            <div className="form-check categories-filter">
-                                <input className="form-check-input emerald_radio color_theme_radio theme-radio-checked" type="radio" name="flexRadioDefault1" id="flexRadioDefault6" />
-                            </div>
+                            {
+                                uniqueColors.map((color_variants, index) =>
+                                    <div key={index} className="form-check categories-filter">
+                                        <input className="form-check-input color_theme_radio theme-radio-checked" type="radio" name="flexRadioDefault1" id="flexRadioDefault1" style={{backgroundColor:color_variants}}/>
+                                    </div>
+                                )
+                            }
                         </div>
                     </div>
 
@@ -164,3 +165,7 @@ function Shop() {
 
 
 export default Shop
+
+
+
+

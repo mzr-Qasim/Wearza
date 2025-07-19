@@ -12112,7 +12112,9 @@ button {
   padding: 0;
 }
 
-b, small, .small {
+b,
+small,
+.small {
   display: block;
 }
 
@@ -12266,36 +12268,8 @@ i.zoom-in {
 }
 
 .theme-radio-checked:checked[type=radio] {
-  background-color: transparent;
   border: 4px solid black;
-}
-
-.purple_radio {
-  background-color: purple;
-}
-
-.green_radio {
-  background-color: green;
-}
-
-.red_radio {
-  background-color: red;
-}
-
-.black_radio {
-  background-color: #000000;
-}
-
-.cyan_radio {
-  background-color: cyan;
-}
-
-.emerald_radio {
-  background-color: #50C878;
-}
-
-.orange_radio {
-  background-color: orange;
+  background-color: tra;
 }
 
 .form-range {
@@ -12376,6 +12350,59 @@ figure:hover .video-options .video-option {
   background: #000000 !important;
 }
 
+.swiper-button-prev {
+  color: #ffffff !important;
+  background-color: #000000 !important;
+  border-radius: 50% !important;
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+}
+.swiper-button-prev::after {
+  font-size: 1.5rem !important;
+}
+
+.swiper-button-next {
+  color: #ffffff !important;
+  background-color: #000000 !important;
+  border-radius: 50% !important;
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+}
+.swiper-button-next::after {
+  font-size: 1.5rem !important;
+}
+
+.custom-pagination-wrapper {
+  position: absolute;
+  bottom: 0.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  background-color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-inline: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.custom-pagination-wrapper .swiper-pagination-bullet {
+  background-color: #222;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+.custom-pagination-wrapper .swiper-pagination-bullet-active {
+  background-color: #111;
+  transform: scale(1.3);
+}
+
 .main_hero_section {
   margin-top: 5.5rem;
   margin-bottom: 5rem;
@@ -12386,7 +12413,7 @@ figure:hover .video-options .video-option {
   min-height: 90vh;
   display: flex;
   flex-direction: column;
-  padding: 2rem 0;
+  padding: 4rem 0;
   justify-content: flex-end;
   align-items: flex-start;
 }
@@ -12551,8 +12578,8 @@ nav.Navbar .main_logo {
   font-size: 1.2rem;
 }
 .shop-genie-canvas .ai-bot-inner textarea:focus {
-  border-color: #d4af37;
-  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+  border: 2px solid #38bdf8;
+  box-shadow: 0 0 12px #38bdf8;
 }
 .shop-genie-canvas .ai-bot-inner textarea::-moz-placeholder {
   font-size: 1.2rem;
@@ -12578,6 +12605,7 @@ nav.Navbar .main_logo {
 }
 .shop-genie-canvas .ai-bot-inner .bot-submit-btn:hover {
   background-color: #000000;
+  box-shadow: 0 0 12px #38bdf8;
 }
 .shop-genie-canvas .ai-bot-inner .bot-submit-btn:hover i {
   color: #ffffff;
@@ -12842,10 +12870,10 @@ section.seasonal-section .seasonal-section-inner {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 75vh;
+  height: 85vh;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   background-position: top;
 }
 section.seasonal-section .seasonal-section-inner::after {
@@ -12944,34 +12972,6 @@ section.seasonal-section .seasonal-section-inner .seasonal-caption h2, section.s
   padding-bottom: 2rem;
 }
 
-.gallery-swiper .swiper-button-prev {
-  color: #000000;
-  background-color: #ffffff;
-  border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: none;
-}
-.gallery-swiper .swiper-button-prev::after {
-  font-size: 1.5rem;
-}
-.gallery-swiper .swiper-button-next {
-  color: #000000;
-  background-color: #ffffff;
-  border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: none;
-}
-.gallery-swiper .swiper-button-next::after {
-  font-size: 1.5rem;
-}
 .gallery-swiper .swiper-slide figure {
   width: 100%;
   aspect-ratio: 1/1.4;

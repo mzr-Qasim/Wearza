@@ -4,11 +4,16 @@ import { Link } from "react-router"
 import main_logo from "/images/main_logo.svg"
 import { ShopContext } from "../App"
 import { useContext } from "react"
+import { products as productData } from "../productCardData"
+
 
 
 function Navbar() {
     const { cart, setCart } = useContext(ShopContext)
 
+
+
+    const [products, setProducts] = useState(productData)
 
     const [showSearchbar, setShowSearchBar] = useState(false)
     const handleSearchBar = () => {
@@ -18,6 +23,14 @@ function Navbar() {
     const [showMenu, setShowMenu] = useState(false)
     const handleNavToggle = () => {
         setShowMenu(!showMenu)
+    }
+
+    const handleSearch = (e) => {
+        const searchResult = products.filter((product => product.title === e.target.value))
+        setProducts(searchResult)
+
+
+
     }
 
     return (
@@ -90,11 +103,14 @@ function Navbar() {
                 <div className="offcanvas-body d-flex flex-colum align-items-center">
                     <div className="container">
                         <div className="search-input-inner">
-                            <input className="searchInput" placeholder="Search for products, brands and more" type="text" name="search" />
+                            <input className="searchInput" placeholder="Search for products, brands and more" type="search" name="search" onChange={handleSearch} />
                             <button className="search_query"><i className="icon-search"></i></button>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="productsFound">
+                
             </div>
         </nav>
     )

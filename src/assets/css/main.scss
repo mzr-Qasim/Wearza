@@ -14,7 +14,7 @@
         min-height: 90vh;
         display: flex;
         flex-direction: column;
-        padding: 2rem 0;
+        padding: 4rem 0;
         justify-content: flex-end;
         align-items: flex-start;
 
@@ -225,8 +225,8 @@ nav.Navbar {
             font-size: 1.2rem;
 
             &:focus {
-                border-color: #d4af37;
-                box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+                border: 2px solid #38bdf8;
+                box-shadow: 0 0 12px #38bdf8;
             }
 
             &::placeholder {
@@ -252,6 +252,7 @@ nav.Navbar {
 
             &:hover {
                 background-color: $black-color;
+                box-shadow: 0 0 12px #38bdf8;
 
                 i {
                     color: $white-color;
@@ -582,10 +583,10 @@ section.seasonal-section {
         background-attachment: fixed;
         object-fit: cover;
         width: 100%;
-        height: 75vh;
+        height: 85vh;
         display: flex;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
         background-position: top;
 
         &::after {
@@ -710,40 +711,6 @@ section.seasonal-section {
 }
 
 .gallery-swiper {
-    .swiper-button-prev {
-        color: $black-color;
-        background-color: $white-color;
-        border-radius: 50%;
-        width: 2rem;
-        height: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        display: none;
-
-
-        &::after {
-            font-size: 1.5rem;
-        }
-
-
-    }
-
-    .swiper-button-next {
-        color: $black-color;
-        background-color: $white-color;
-        border-radius: 50%;
-        width: 2rem;
-        height: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        display: none;
-
-        &::after {
-            font-size: 1.5rem;
-        }
-    }
 
     .swiper-slide {
 

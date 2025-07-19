@@ -1,21 +1,61 @@
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
+import { categoryCard } from "../categoryCard"
 
 
-
-
-export function CategoriesCard(props) {
+export function CategoriesCard() {
     return (
-        <div className="col-sm-6 col-md-6 col-lg-4 col-xl-3 ">
-            <div className="categories-card">
-                    <figure>
-                        <img src={props.product.image} loading="lazy" alt="" />
-                        <figcaption>
-                            <h4 className="pb-2">{props.product.title}</h4>
-                            <a href="" className="theme-btn secondary_btn">shop now</a>
-                        </figcaption>
-                    </figure>
-            </div>
-        </div>
+        <Swiper
+            navigation
+            pagination={{ clickable: true }}
+            modules={[Navigation]}
+            loop={true}
+            breakpoints={{
+                375: {
+                    spaceBetween: 15,
+                    slidesPerView: 1,
+                },
+                576: {
+                    spaceBetween: 15,
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                1300: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                },
+            }}
+            className="hero-swiper"
+        >
+            {
+                categoryCard.map((categorycard, index) => (
+                    <SwiperSlide key={index}>
+                        <div className="categories-card">
+                            <figure>
+                                <img src={categorycard.image} loading="lazy" alt="" />
+                                <figcaption>
+                                    <h4 className="pb-2">{categorycard.title}</h4>
+                                    <a href="" className="theme-btn secondary_btn">shop now</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </SwiperSlide>
+                ))
+            }
+        </Swiper>
+
+
 
     )
 }

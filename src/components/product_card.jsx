@@ -42,18 +42,13 @@ export function ProductCard(props) {
                 <div className="product-details pt-3">
                     <div className="color-swatches">
                         <ul>
-                            <li>
-                                <button
-                                    className="swatch black active"></button>
-                            </li>
-                            <li>
-                                <button
-                                    className="swatch brown"></button>
-                            </li>
-                            <li>
-                                <button
-                                    className="swatch grey"></button>
-                            </li>
+                            {
+                                props.product.colors.map((product_color, index) => (
+                                    <li key={index}>
+                                        <button className="swatch" style={{backgroundColor:product_color}}></button>
+                                    </li>
+                                ))
+                            }
                         </ul>
                     </div>
                     <Link className="product-title" to={`/products/${props.product.id}`}>{props.product.title}</Link>
