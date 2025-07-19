@@ -15,15 +15,11 @@ export function CategoriesCard() {
             modules={[Navigation]}
             loop={true}
             breakpoints={{
-                375: {
-                    spaceBetween: 15,
-                    slidesPerView: 1,
-                },
-                576: {
-                    spaceBetween: 15,
+                0: {
+                    spaceBetween: 5,
                     slidesPerView: 2,
                 },
-                768: {
+                767: {
                     slidesPerView: 2,
                     spaceBetween: 20,
                 },

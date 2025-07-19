@@ -13365,6 +13365,22 @@ section.Create-account .create-account-wrapper {
   .main_hero_inner figure .main_hero_caption .caption-inner {
     width: 100%;
   }
+  .categories-card figure {
+    position: static;
+    overflow: visible;
+  }
+  .categories-card figure figcaption {
+    position: static;
+    z-index: 50;
+    bottom: 0;
+    left: 0;
+    transform: translate(0);
+    background-color: #000000;
+    z-index: 50;
+  }
+  .categories-card figure:hover img {
+    scale: none;
+  }
   section.product-cards .product-card figure:hover .main_img {
     opacity: 1;
   }
